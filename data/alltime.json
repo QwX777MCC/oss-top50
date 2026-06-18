@@ -136,7 +136,7 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 55229,
-    "desc_cn": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ..."
+    "desc_cn": "个人 AI 助手平台。连接 WhatsApp、Telegram、Slack 等通讯工具，拥有记忆、定时任务和技能系统。"
   },
   {
     "name": "nilbuild/developer-roadmap",
@@ -162,7 +162,7 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 3172,
-    "desc_cn": "Interactive roadmaps, guides and other educational content to help developers grow in their careers...."
+    "desc_cn": "交互式开发者学习路线图，为不同方向（前端/后端/DevOps）提供视觉化的技能树和成长路径。"
   },
   {
     "name": "donnemartin/system-design-primer",
@@ -236,7 +236,7 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 2081,
-    "desc_cn": "An opinionated list of Python frameworks, libraries, tools, and resources..."
+    "desc_cn": "精选的 Python 框架、库、软件和资源列表。"
   },
   {
     "name": "awesome-selfhosted/awesome-selfhosted",
@@ -260,7 +260,7 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 2229,
-    "desc_cn": "A list of Free Software network services and web applications which can be hosted on your own servers..."
+    "desc_cn": "可自托管的自由软件和网络应用服务列表。"
   },
   {
     "name": "996icu/996.ICU",
@@ -275,7 +275,7 @@
     "topics": [],
     "license": "NOASSERTION",
     "stars_month": 3139,
-    "desc_cn": "Repo for counting stars and contributing. Press F to pay respect to glorious developers...."
+    "desc_cn": "996 工作制（早九点到晚九点，每周六天）对劳动者健康危害巨大。以此项目呼吁遵守劳动法。"
   },
   {
     "name": "practical-tutorials/project-based-learning",
@@ -351,7 +351,7 @@
     "topics": [],
     "license": "MIT",
     "stars_month": 27522,
-    "desc_cn": "An agentic skills framework & software development methodology that works...."
+    "desc_cn": "AI 编码代理的超级技能集合，大幅提升代理在真实项目中的表现。"
   },
   {
     "name": "trimstray/the-book-of-secret-knowledge",
@@ -377,7 +377,7 @@
     ],
     "license": "MIT",
     "stars_month": 2354,
-    "desc_cn": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more...."
+    "desc_cn": "系统管理员和 IT 从业者的实用手册，涵盖 CLI、网络、安全、脚本化等。"
   },
   {
     "name": "TheAlgorithms/Python",
@@ -427,7 +427,7 @@
     ],
     "license": "MIT",
     "stars_month": 43180,
-    "desc_cn": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencod..."
+    "desc_cn": "Claude Code 的代理性能优化系统。为编码代理提供技能、记忆、安全和研究优先开发支持。"
   },
   {
     "name": "vuejs/vue",
@@ -467,7 +467,7 @@
     ],
     "license": "MIT",
     "stars_month": 1389,
-    "desc_cn": "🎓 Path to a free self-taught education in Computer Science!..."
+    "desc_cn": "通往免费自学计算机科学学位的路径。"
   },
   {
     "name": "NousResearch/hermes-agent",
@@ -556,7 +556,7 @@
     "topics": [],
     "license": "MIT",
     "stars_month": 73666,
-    "desc_cn": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention...."
+    "desc_cn": "一个完全由 AI 代理管理、零人类干预开发和维护的 Rust 博物馆展品式项目。"
   },
   {
     "name": "n8n-io/n8n",
@@ -582,7 +582,7 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 2268,
-    "desc_cn": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations...."
+    "desc_cn": "可自托管的 AI 原生工作流自动化工具，通过可视化工作流连接各类服务。"
   },
   {
     "name": "ohmyzsh/ohmyzsh",
@@ -655,7 +655,7 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 4664,
-    "desc_cn": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matter..."
+    "desc_cn": "设置目标后，AI 代理自动拆解任务、搜索信息并执行。"
   },
   {
     "name": "CyC2018/CS-Notes",
@@ -746,7 +746,7 @@
     ],
     "license": "GPL-3.0",
     "stars_month": 2283,
-    "desc_cn": "Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting...."
+    "desc_cn": "Windows 和 Office 激活脚本合集，使用 HWID/Ohook/KMS38/在线 KMS 等多种方法。"
   },
   {
     "name": "DigitalPlatDev/FreeDomain",
@@ -784,7 +784,7 @@
     "topics": [],
     "license": "",
     "stars_month": 37546,
-    "desc_cn": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls...."
+    "desc_cn": "一个优化 Claude Code 行为的 CLAUDE.md 文件，基于 Andrej Karpathy 对 LLM 编码陷阱的深入观察。"
   },
   {
     "name": "flutter/flutter",
@@ -847,7 +847,7 @@
     ],
     "license": "MIT",
     "stars_month": 1208,
-    "desc_cn": "A curated list of awesome Go frameworks, libraries and software..."
+    "desc_cn": "精选的 Go 语言框架、库和软件列表。"
   },
   {
     "name": "github/gitignore",
@@ -891,7 +891,7 @@
     ],
     "license": "MIT",
     "stars_month": 4809,
-    "desc_cn": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models...."
+    "desc_cn": "在本地运行大语言模型。支持 Llama、Mistral、Gemma 等多种模型，一条命令即可启动。"
   },
   {
     "name": "twbs/bootstrap",
@@ -937,7 +937,7 @@
     ],
     "license": "Unlicense",
     "stars_month": 2492,
-    "desc_cn": "A feature-rich command-line audio/video downloader..."
+    "desc_cn": "功能丰富的命令行音频/视频下载器，支持数千个网站。"
   },
   {
     "name": "f/prompts.chat",
@@ -963,7 +963,7 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 3808,
-    "desc_cn": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with c..."
+    "desc_cn": "为 LLM 准备的高质量 Prompt 合集，提升 AI 对话和任务完成质量。"
   },
   {
     "name": "AUTOMATIC1111/stable-diffusion-webui",
@@ -1106,7 +1106,7 @@
     ],
     "license": "MIT",
     "stars_month": 8002,
-    "desc_cn": "Python tool for converting files and office documents to Markdown...."
+    "desc_cn": "微软开源的 Python 工具，用于将各类文件（PDF、Word、Excel 等）和多媒体内容转换为 Markdown。"
   },
   {
     "name": "anthropics/skills",
