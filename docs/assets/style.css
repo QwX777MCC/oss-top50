@@ -66,12 +66,14 @@ body{
 }
 .wrap{max-width:1060px;margin:0 auto;padding:clamp(20px,5vw,52px) clamp(12px,3vw,32px) clamp(56px,8vw,88px)}
 
-.home-link{display:inline-block;font-size:10px;color:var(--tx-f);text-decoration:none;margin-bottom:8px;letter-spacing:.06em}
-.home-link:hover{color:var(--link)}
-
 header{margin-bottom:36px}
 .eyebrow{color:var(--tx-f);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .eyebrow::before{content:"";width:18px;height:1.5px;background:var(--tx-f);border-radius:1px}
+a.eyebrow{text-decoration:none;transition:color var(--tr);cursor:pointer}
+a.eyebrow::after{content:"↩";font-size:10px;margin-left:2px;opacity:0;transition:opacity var(--tr)}
+a.eyebrow:hover{color:var(--link)}
+a.eyebrow:hover::before{background:var(--link);width:28px}
+a.eyebrow:hover::after{opacity:.6}
 h1{font-size:clamp(1.25rem,3vw,1.8rem);font-weight:600;letter-spacing:-.015em;margin:0 0 6px}
 .subtitle{color:var(--tx-d);font-size:.9rem;line-height:1.65;word-break:break-word;overflow-wrap:break-word;letter-spacing:.015em}
 .src-line{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.72rem;color:var(--tx-f)}
