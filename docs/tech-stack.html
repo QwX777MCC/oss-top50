@@ -49,7 +49,7 @@
 /* 新手解读卡片 */
 .novice-box{
   background:oklch(0.97 0.01 95);border:1px solid oklch(0.88 0.03 95);
-  border-radius:var(--rl);padding:14px 18px;margin:18px 0 8px
+  border-radius:var(--rl);padding:14px 16px;margin-bottom:14px
 }
 @media(prefers-color-scheme:dark){
   .novice-box{
@@ -330,8 +330,8 @@ const RECENT = [ ...共50条... ];</code></pre>
 <p>9 个领域各有一种标识色，用 <code>oklch()</code> 色彩空间生成：</p>
 <pre><code>/* AI Agent → oklch(0.60 0.05 250) → 蓝紫色调，但饱和度极低 */
 /* AI/ML   → oklch(0.60 0.05 180) → 青色系，同样低饱和 */
-/* 教育    → oklch(0.60 0.05 95)  → 暖黄绿色 */</code></pre>
-<p><strong>关键：所有领域色的亮度（0.60）和饱和度（0.05）完全一致</strong>，只有色相（hue）不同。这让它们在视觉上"同等重要"，不会某个颜色特别抢眼——符合莫兰迪"所有颜色都安静"的理念。</p>
+/* 教育    → oklch(0.60 0.05 95)  → 黄绿色 */</code></pre>
+<p><strong>关键：所有领域色的亮度（0.60）和饱和度（0.05）完全一致</strong>，只有色相（hue）不同。这让它们在视觉上"同等重要"，不会某个颜色特别抢眼——符合青蓝彩色高级灰"所有颜色都安静"的理念。</p>
 
 <h4>布局方案</h4>
 <table class="term-table">
@@ -500,8 +500,8 @@ steps:
 </table>
 </section>
 
-<footer style="margin-top:48px;padding:24px 0;border-top:1.5px solid var(--bd)">
-<p style="font-size:.76rem;color:var(--tx-f)">oss-top50 技术栈文档 · 面向零基础学习者的技术梳理 · 随项目持续更新</p>
+<footer>
+<p>oss-top50 技术栈文档 · 面向零基础学习者的技术梳理 · 随项目持续更新</p>
 </footer>
 
 </div>
