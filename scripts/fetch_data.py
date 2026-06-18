@@ -5,13 +5,17 @@ Usage: python scripts/fetch_data.py
 Requires: GITHUB_TOKEN env var (used as HTTP auth to avoid rate limits)
 """
 
-import json, os, sys, time
+import json, os, sys, time, logging
 from datetime import date
 try:
     import requests
 except ImportError:
     print("Missing 'requests'. Run: pip install requests")
     sys.exit(1)
+
+# Suppress request-level logging (prevents accidental header/token leak)
+logging.getLogger("requests").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 UA = "Mozilla/5.0 (oss-top50-bot)"

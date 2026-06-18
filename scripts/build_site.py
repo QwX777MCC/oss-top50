@@ -3,9 +3,27 @@ import json, os, re
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 DOCS_DIR = os.path.join(os.path.dirname(__file__), '..', 'docs')
 
-# Load data
+# Load and validate data
 alltime = json.load(open(os.path.join(DATA_DIR, 'alltime.json'), 'r', encoding='utf-8'))
 recent = json.load(open(os.path.join(DATA_DIR, 'recent.json'), 'r', encoding='utf-8'))
+
+# ─── Data integrity check ───
+def validate_data(data, label):
+    if not isinstance(data, list):
+        raise ValueError(f"{label}: expected a list, got {type(data).__name__}")
+    if len(data) == 0:
+        raise ValueError(f"{label}: empty dataset, refusing to generate page")
+    required = ['name', 'url', 'stars']
+    for i, r in enumerate(data):
+        for field in required:
+            if field not in r or r[field] is None:
+                raise ValueError(f"{label}[{i}]: missing required field '{field}'")
+        if not isinstance(r.get('stars', 0), (int, float)):
+            raise ValueError(f"{label}[{i}]: stars must be a number, got {type(r['stars']).__name__}")
+    print(f"  [ok] {label}: {len(data)} repos validated")
+
+validate_data(alltime, 'alltime')
+validate_data(recent, 'recent')
 
 def classify_field(item):
     name = item['name'].lower()
