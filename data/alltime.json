@@ -19,7 +19,8 @@
     ],
     "license": "",
     "stars_month": 5234,
-    "desc_cn": "通过从零重建你最喜欢的科技来掌握编程。"
+    "desc_cn": "通过从零重建你最喜欢的科技来掌握编程。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "sindresorhus/awesome",
@@ -40,7 +41,8 @@
     ],
     "license": "CC0-1.0",
     "stars_month": 3280,
-    "desc_cn": "各种有趣主题的精选 Awesome 列表合集。"
+    "desc_cn": "各种有趣主题的精选 Awesome 列表合集。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "freeCodeCamp/freeCodeCamp",
@@ -66,7 +68,8 @@
     ],
     "license": "BSD-3-Clause",
     "stars_month": 3213,
-    "desc_cn": "freeCodeCamp.org 的开源代码库和课程。免费学习数学、编程和计算机科学。"
+    "desc_cn": "freeCodeCamp.org 的开源代码库和课程。免费学习数学、编程和计算机科学。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "public-apis/public-apis",
@@ -92,7 +95,8 @@
     ],
     "license": "MIT",
     "stars_month": 3546,
-    "desc_cn": "免费 API 的汇总列表，供开发者快速查找可用的公共接口。"
+    "desc_cn": "免费 API 的汇总列表，供开发者快速查找可用的公共接口。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "EbookFoundation/free-programming-books",
@@ -113,7 +117,8 @@
     ],
     "license": "CC-BY-4.0",
     "stars_month": 2528,
-    "desc_cn": "免费获取的编程书籍大全。"
+    "desc_cn": "免费获取的编程书籍大全。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "openclaw/openclaw",
@@ -136,7 +141,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 55229,
-    "desc_cn": "个人 AI 助手平台。连接 WhatsApp、Telegram、Slack 等通讯工具，拥有记忆、定时任务和技能系统。"
+    "desc_cn": "个人 AI 助手平台。连接 WhatsApp、Telegram、Slack 等通讯工具，拥有记忆、定时任务和技能系统。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "nilbuild/developer-roadmap",
@@ -162,7 +168,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 3172,
-    "desc_cn": "交互式开发者学习路线图，为不同方向（前端/后端/DevOps）提供视觉化的技能树和成长路径。"
+    "desc_cn": "交互式开发者学习路线图，为不同方向（前端/后端/DevOps）提供视觉化的技能树和成长路径。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "donnemartin/system-design-primer",
@@ -188,7 +195,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 3121,
-    "desc_cn": "学习如何设计大规模系统。为系统设计面试做准备。包含 Anki 记忆卡片。"
+    "desc_cn": "学习如何设计大规模系统。为系统设计面试做准备。包含 Anki 记忆卡片。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "jwasham/coding-interview-university",
@@ -214,7 +222,8 @@
     ],
     "license": "CC-BY-SA-4.0",
     "stars_month": 2889,
-    "desc_cn": "一套完整的计算机科学学习计划，专为成为软件工程师而设计。"
+    "desc_cn": "一套完整的计算机科学学习计划，专为成为软件工程师而设计。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "vinta/awesome-python",
@@ -236,7 +245,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 2081,
-    "desc_cn": "精选的 Python 框架、库、软件和资源列表。"
+    "desc_cn": "精选的 Python 框架、库、软件和资源列表。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "awesome-selfhosted/awesome-selfhosted",
@@ -260,7 +270,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 2229,
-    "desc_cn": "可自托管的自由软件和网络应用服务列表。"
+    "desc_cn": "可自托管的自由软件和网络应用服务列表。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "996icu/996.ICU",
@@ -275,7 +286,8 @@
     "topics": [],
     "license": "NOASSERTION",
     "stars_month": 3139,
-    "desc_cn": "996 工作制（早九点到晚九点，每周六天）对劳动者健康危害巨大。以此项目呼吁遵守劳动法。"
+    "desc_cn": "996 工作制（早九点到晚九点，每周六天）对劳动者健康危害巨大。以此项目呼吁遵守劳动法。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "practical-tutorials/project-based-learning",
@@ -299,7 +311,8 @@
     ],
     "license": "MIT",
     "stars_month": 2414,
-    "desc_cn": "精选项目教程列表，通过构建实际项目来学习编程。"
+    "desc_cn": "精选项目教程列表，通过构建实际项目来学习编程。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "react/react",
@@ -321,7 +334,8 @@
     ],
     "license": "MIT",
     "stars_month": 1546,
-    "desc_cn": "The library for web and native user interfaces...."
+    "desc_cn": "The library for web and native user interfaces....",
+    "desc_cn_source": "auto"
   },
   {
     "name": "torvalds/linux",
@@ -336,7 +350,8 @@
     "topics": [],
     "license": "NOASSERTION",
     "stars_month": 1315,
-    "desc_cn": "Linux 内核源代码树。"
+    "desc_cn": "Linux 内核源代码树。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "obra/superpowers",
@@ -351,7 +366,8 @@
     "topics": [],
     "license": "MIT",
     "stars_month": 27522,
-    "desc_cn": "AI 编码代理的超级技能集合，大幅提升代理在真实项目中的表现。"
+    "desc_cn": "AI 编码代理的超级技能集合，大幅提升代理在真实项目中的表现。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "trimstray/the-book-of-secret-knowledge",
@@ -377,7 +393,8 @@
     ],
     "license": "MIT",
     "stars_month": 2354,
-    "desc_cn": "系统管理员和 IT 从业者的实用手册，涵盖 CLI、网络、安全、脚本化等。"
+    "desc_cn": "系统管理员和 IT 从业者的实用手册，涵盖 CLI、网络、安全、脚本化等。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "TheAlgorithms/Python",
@@ -403,7 +420,8 @@
     ],
     "license": "MIT",
     "stars_month": 1838,
-    "desc_cn": "Python 实现的所有算法。"
+    "desc_cn": "Python 实现的所有算法。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "affaan-m/ECC",
@@ -427,7 +445,8 @@
     ],
     "license": "MIT",
     "stars_month": 43180,
-    "desc_cn": "Claude Code 的代理性能优化系统。为编码代理提供技能、记忆、安全和研究优先开发支持。"
+    "desc_cn": "Claude Code 的代理性能优化系统。为编码代理提供技能、记忆、安全和研究优先开发支持。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "vuejs/vue",
@@ -447,7 +466,8 @@
     ],
     "license": "MIT",
     "stars_month": 1338,
-    "desc_cn": "一个渐进式 Java 框架，用于构建用户界面。"
+    "desc_cn": "一个渐进式 Java 框架，用于构建用户界面。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "ossu/computer-science",
@@ -467,7 +487,8 @@
     ],
     "license": "MIT",
     "stars_month": 1389,
-    "desc_cn": "通往免费自学计算机科学学位的路径。"
+    "desc_cn": "通往免费自学计算机科学学位的路径。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "NousResearch/hermes-agent",
@@ -493,7 +514,8 @@
     ],
     "license": "MIT",
     "stars_month": 17788,
-    "desc_cn": "The agent that grows with you..."
+    "desc_cn": "The agent that grows with you...",
+    "desc_cn_source": "manual"
   },
   {
     "name": "trekhleb/javascript-algorithms",
@@ -517,7 +539,8 @@
     ],
     "license": "MIT",
     "stars_month": 1956,
-    "desc_cn": "基于 Java 的算法和数据结构示例及解释。"
+    "desc_cn": "基于 Java 的算法和数据结构示例及解释。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "tensorflow/tensorflow",
@@ -541,7 +564,8 @@
     ],
     "license": "Apache-2.0",
     "stars_month": 1515,
-    "desc_cn": "面向所有人的开源机器学习框架。"
+    "desc_cn": "面向所有人的开源机器学习框架。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "ultraworkers/claw-code",
@@ -556,7 +580,8 @@
     "topics": [],
     "license": "MIT",
     "stars_month": 73666,
-    "desc_cn": "一个完全由 AI 代理管理、零人类干预开发和维护的 Rust 博物馆展品式项目。"
+    "desc_cn": "一个完全由 AI 代理管理、零人类干预开发和维护的 Rust 博物馆展品式项目。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "n8n-io/n8n",
@@ -582,7 +607,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 2268,
-    "desc_cn": "可自托管的 AI 原生工作流自动化工具，通过可视化工作流连接各类服务。"
+    "desc_cn": "可自托管的 AI 原生工作流自动化工具，通过可视化工作流连接各类服务。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "ohmyzsh/ohmyzsh",
@@ -608,7 +634,8 @@
     ],
     "license": "MIT",
     "stars_month": 919,
-    "desc_cn": "一个令人愉快的社区驱动框架，用于管理 Zsh 配置。包含数千个有用的函数和插件。"
+    "desc_cn": "一个令人愉快的社区驱动框架，用于管理 Zsh 配置。包含数千个有用的函数和插件。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "microsoft/vscode",
@@ -629,7 +656,8 @@
     ],
     "license": "MIT",
     "stars_month": 1419,
-    "desc_cn": "Visual Studio Code。"
+    "desc_cn": "Visual Studio Code。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "Significant-Gravitas/AutoGPT",
@@ -655,7 +683,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 4664,
-    "desc_cn": "设置目标后，AI 代理自动拆解任务、搜索信息并执行。"
+    "desc_cn": "设置目标后，AI 代理自动拆解任务、搜索信息并执行。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "CyC2018/CS-Notes",
@@ -679,7 +708,8 @@
     ],
     "license": "",
     "stars_month": 1817,
-    "desc_cn": "技术面试必备基础知识，涵盖 Leetcode、操作系统、计算机网络、系统设计。"
+    "desc_cn": "技术面试必备基础知识，涵盖 Leetcode、操作系统、计算机网络、系统设计。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "getify/You-Dont-Know-JS",
@@ -705,7 +735,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 1204,
-    "desc_cn": "深入理解 Java 核心机制的书系列。"
+    "desc_cn": "深入理解 Java 核心机制的书系列。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "jackfrued/Python-100-Days",
@@ -720,7 +751,8 @@
     "topics": [],
     "license": "",
     "stars_month": 1816,
-    "desc_cn": "Python 从新手到大师的 100 天学习计划。"
+    "desc_cn": "Python 从新手到大师的 100 天学习计划。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "massgravel/Microsoft-Activation-Scripts",
@@ -746,7 +778,8 @@
     ],
     "license": "GPL-3.0",
     "stars_month": 2283,
-    "desc_cn": "Windows 和 Office 激活脚本合集，使用 HWID/Ohook/KMS38/在线 KMS 等多种方法。"
+    "desc_cn": "Windows 和 Office 激活脚本合集，使用 HWID/Ohook/KMS38/在线 KMS 等多种方法。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "DigitalPlatDev/FreeDomain",
@@ -769,7 +802,8 @@
     ],
     "license": "AGPL-3.0",
     "stars_month": 7154,
-    "desc_cn": "DigitalPlat FreeDomain: Free Domain For Everyone..."
+    "desc_cn": "DigitalPlat FreeDomain: Free Domain For Everyone...",
+    "desc_cn_source": "auto"
   },
   {
     "name": "multica-ai/andrej-karpathy-skills",
@@ -784,7 +818,8 @@
     "topics": [],
     "license": "",
     "stars_month": 37546,
-    "desc_cn": "一个优化 Claude Code 行为的 CLAUDE.md 文件，基于 Andrej Karpathy 对 LLM 编码陷阱的深入观察。"
+    "desc_cn": "一个优化 Claude Code 行为的 CLAUDE.md 文件，基于 Andrej Karpathy 对 LLM 编码陷阱的深入观察。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "flutter/flutter",
@@ -810,7 +845,8 @@
     ],
     "license": "BSD-3-Clause",
     "stars_month": 1288,
-    "desc_cn": "Flutter 让你轻松快速地为移动端、Web 和桌面端构建精美的原生编译应用。"
+    "desc_cn": "Flutter 让你轻松快速地为移动端、Web 和桌面端构建精美的原生编译应用。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "anomalyco/opencode",
@@ -825,7 +861,8 @@
     "topics": [],
     "license": "MIT",
     "stars_month": 12735,
-    "desc_cn": "The open source coding agent...."
+    "desc_cn": "The open source coding agent....",
+    "desc_cn_source": "manual"
   },
   {
     "name": "avelino/awesome-go",
@@ -847,7 +884,8 @@
     ],
     "license": "MIT",
     "stars_month": 1208,
-    "desc_cn": "精选的 Go 语言框架、库和软件列表。"
+    "desc_cn": "精选的 Go 语言框架、库和软件列表。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "github/gitignore",
@@ -865,7 +903,8 @@
     ],
     "license": "CC0-1.0",
     "stars_month": 918,
-    "desc_cn": "A collection of useful .gitignore templates..."
+    "desc_cn": "A collection of useful .gitignore templates...",
+    "desc_cn_source": "auto"
   },
   {
     "name": "ollama/ollama",
@@ -891,7 +930,8 @@
     ],
     "license": "MIT",
     "stars_month": 4809,
-    "desc_cn": "在本地运行大语言模型。支持 Llama、Mistral、Gemma 等多种模型，一条命令即可启动。"
+    "desc_cn": "在本地运行大语言模型。支持 Llama、Mistral、Gemma 等多种模型，一条命令即可启动。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "twbs/bootstrap",
@@ -914,7 +954,8 @@
     ],
     "license": "MIT",
     "stars_month": 962,
-    "desc_cn": "最流行的 HTML、CSS 和 Java 框架，用于开发响应式、移动优先的 Web 项目。"
+    "desc_cn": "最流行的 HTML、CSS 和 Java 框架，用于开发响应式、移动优先的 Web 项目。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "yt-dlp/yt-dlp",
@@ -937,7 +978,8 @@
     ],
     "license": "Unlicense",
     "stars_month": 2492,
-    "desc_cn": "功能丰富的命令行音频/视频下载器，支持数千个网站。"
+    "desc_cn": "功能丰富的命令行音频/视频下载器，支持数千个网站。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "f/prompts.chat",
@@ -963,7 +1005,8 @@
     ],
     "license": "NOASSERTION",
     "stars_month": 3808,
-    "desc_cn": "为 LLM 准备的高质量 Prompt 合集，提升 AI 对话和任务完成质量。"
+    "desc_cn": "为 LLM 准备的高质量 Prompt 合集，提升 AI 对话和任务完成质量。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "AUTOMATIC1111/stable-diffusion-webui",
@@ -989,7 +1032,8 @@
     ],
     "license": "AGPL-3.0",
     "stars_month": 3519,
-    "desc_cn": "Stable Diffusion web UI..."
+    "desc_cn": "Stable Diffusion web UI...",
+    "desc_cn_source": "manual"
   },
   {
     "name": "521xueweihan/HelloGitHub",
@@ -1009,7 +1053,8 @@
     ],
     "license": "",
     "stars_month": 1313,
-    "desc_cn": "分享 GitHub 上有趣、入门级的开源项目。"
+    "desc_cn": "分享 GitHub 上有趣、入门级的开源项目。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "huggingface/transformers",
@@ -1035,7 +1080,8 @@
     ],
     "license": "Apache-2.0",
     "stars_month": 1739,
-    "desc_cn": "Transformers：Pytorch、TensorFlow 和 JAX 的最先进机器学习模型。"
+    "desc_cn": "Transformers：Pytorch、TensorFlow 和 JAX 的最先进机器学习模型。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "jlevy/the-art-of-command-line",
@@ -1057,7 +1103,8 @@
     ],
     "license": "",
     "stars_month": 1196,
-    "desc_cn": "Master the command line, in one page..."
+    "desc_cn": "Master the command line, in one page...",
+    "desc_cn_source": "auto"
   },
   {
     "name": "Snailclimb/JavaGuide",
@@ -1083,7 +1130,8 @@
     ],
     "license": "Apache-2.0",
     "stars_month": 1583,
-    "desc_cn": "Java 面试与后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发。"
+    "desc_cn": "Java 面试与后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "microsoft/markitdown",
@@ -1106,7 +1154,8 @@
     ],
     "license": "MIT",
     "stars_month": 8002,
-    "desc_cn": "微软开源的 Python 工具，用于将各类文件（PDF、Word、Excel 等）和多媒体内容转换为 Markdown。"
+    "desc_cn": "微软开源的 Python 工具，用于将各类文件（PDF、Word、Excel 等）和多媒体内容转换为 Markdown。",
+    "desc_cn_source": "manual"
   },
   {
     "name": "anthropics/skills",
@@ -1123,6 +1172,7 @@
     ],
     "license": "",
     "stars_month": 16975,
-    "desc_cn": "Public repository for Agent Skills..."
+    "desc_cn": "Public repository for Agent Skills...",
+    "desc_cn_source": "auto"
   }
 ]

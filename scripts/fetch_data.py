@@ -78,10 +78,11 @@ def main():
     # Preserve existing desc_cn translations
     if os.path.exists(path_all):
         existing = json.load(open(path_all, 'r', encoding='utf-8'))
-        existing_map = {r['name']: r.get('desc_cn', '') for r in existing}
+        existing_map = {r['name']: {'desc_cn': r.get('desc_cn', ''), 'source': r.get('desc_cn_source', '')} for r in existing}
         for r in compressed_all:
-            if r['name'] in existing_map and existing_map[r['name']]:
-                r['desc_cn'] = existing_map[r['name']]
+            if r['name'] in existing_map and existing_map[r['name']]['desc_cn']:
+                r['desc_cn'] = existing_map[r['name']]['desc_cn']
+                r['desc_cn_source'] = existing_map[r['name']]['source']
     with open(path_all, 'w', encoding='utf-8') as f:
         json.dump(compressed_all, f, ensure_ascii=False, indent=2)
     print(f"  Saved {len(compressed_all)} repos to {path_all}")
