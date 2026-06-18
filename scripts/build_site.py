@@ -247,7 +247,7 @@ html = f'''<!DOCTYPE html>
 <div id="list"></div>
 
 <footer>
-数据来源 <a href="https://github.com" target="_blank">GitHub</a> Search API &middot; 排序 Star 降序 &middot; 洞察基于第一性原理分析 &middot; 手动触发更新 &middot; 生成 {today}
+数据来源 <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a> Search API &middot; 排序 Star 降序 &middot; 洞察基于第一性原理分析 &middot; 手动触发更新 &middot; 生成 {today}
 </footer>
 
 </div>
