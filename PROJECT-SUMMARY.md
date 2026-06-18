@@ -78,7 +78,8 @@ oss-top50/
 | 源码溯源 | 展开区内链接到 GitHub 仓库（灰蓝色） |
 | 统计面板 | 总 Star、最高、中位、覆盖语言 |
 | 明暗主题 | 系统自动跟随 + 右下角 ◐ 手动切换 |
-| 回到顶部 | 滚动 >300px 出现，平滑滚动 |
+| 回到顶部 | 滚动 >300px 出现，CSS 纯几何三角形，平滑滚动 |
+| 返回首页 | eyebrow 即链接，hover 装饰线延长+↩淡入 |
 | 响应式 | 380/420/768/1600 四断点全覆盖 |
 | 离线可用 | 数据内嵌 HTML，0 网络请求 |
 
@@ -86,17 +87,17 @@ oss-top50/
 
 ```bash
 # 本地构建
-cd Desktop\oss-top50
+cd "Desktop\AI资讯\项目2\oss-top50"
 python scripts/build_site.py
 
 # 数据更新 + 构建 + 部署（一条龙）
 # 在 GitHub 网页 → Actions → Update Rankings → Run workflow
 
 # 手动推送（CMD）
-cd Desktop\oss-top50
-"C:\Users\Administrator\.workbuddy\vendor\PortableGit\mingw64\bin\git.exe" add -A
-"C:\Users\Administrator\.workbuddy\vendor\PortableGit\mingw64\bin\git.exe" commit -m "说明"
-"C:\Users\Administrator\.workbuddy\vendor\PortableGit\mingw64\bin\git.exe" push
+cd "Desktop\AI资讯\项目2\oss-top50"
+git add -A
+git commit -m "说明"
+git push
 ```
 
 ## 待升级项
@@ -110,10 +111,11 @@ cd Desktop\oss-top50
 | P2 | 翻译自动化 |
 | P3 | 搜索 / 趋势图 / RSS |
 
-## 提交历史（34 次）
+## 提交历史（45+ 次）
 
 核心节点：
 - 01-15：基础搭建 + 数据 + 翻译
 - 16-22：平面构成优化（按钮/间距/手机端）
 - 23-27：安全审计修复 + 文件整理 + LICENSE
 - 28-34：大小屏适配 + 色彩重构 + 主题切换 + 回到顶部 + 架构修复
+- 35-45+：毫秒透明度 + 色差根因诊断 + 几何替代 + 工作空间归整 + 导航重构

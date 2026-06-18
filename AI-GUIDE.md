@@ -132,18 +132,23 @@ Actions 会自动：
 
 | 变量 | 用途 |
 |------|------|
-| `--cvs` | 画布底色（亮灰 `#f5f3f0`） |
+| `--cvs` | 画布底色（oklch 亮/暗：0.97→0.18, hue 220） |
 | `--crd` | 卡片底色 |
 | `--crd-h` | 卡片 hover 态 |
+| `--crd-a` | 强调色（accent, hue 285 紫） |
 | `--bd` | 边框色 |
+| `--bd-h` | 边框 hover 态 |
 | `--tx` | 正文色 |
 | `--tx-d` | 次要文字 |
-| `--tx-f` | 辅助文字 |
+| `--tx-dim` | 更次级文字 |
+| `--tx-f` | 辅助/装饰文字 |
+| `--link` | 链接色（hue 240 蓝） |
+| `--link-h` | 链接 hover |
 
 **颜色约束**：
-- 明暗双模式：`prefers-color-scheme: dark` 自动切换
-- 领域色统一使用 `oklch(0.60 0.05 {hue})`，确保同饱和度同明度
-- 不使用投影、渐变、分割线
+- 色调体系：青蓝彩色高级灰（主 hue 220°, 强调 hue 285°），使用 oklch() 色彩空间
+- 明暗手动双控：`prefers-color-scheme: dark` 自动 + `[data-theme="dark"/"light"]` 手动覆盖（◐ 按钮切换）
+- 不使用渐变、分割线（投影仅限浮动按钮）
 
 ---
 
@@ -167,6 +172,23 @@ Actions 会自动：
 - [ ] 多语言支持
 - [ ] 月度趋势图表
 - [ ] RSS/邮件订阅
+
+---
+
+## 页面导航架构
+
+| 页面 | 返回首页方式 | 实现 |
+|------|------------|------|
+| index.html | 已在首页 | `<div class="eyebrow">`（非链接） |
+| top50.html | 点击 eyebrow | `<a class="eyebrow" href="./">…</a>` |
+| tech-stack.html | 点击 eyebrow | `<a class="eyebrow" href="./">…</a>` |
+
+**约定**：
+- `.eyebrow` 在子页面是 `<a>` 标签（含 `↩` 图标 + hover 装饰线延长动画），在首页是 `<div>`（纯标签）
+- 顶部 `docs/index.html` 的 `.home-link` 卡片导航保持不变
+- 新增子页面时必须同步添加 eyebrow 链接
+
+**关键 CSS 类名注意**：`.home-link` 仅用于首页卡片导航（L166-169），**不要**复用于其他元素（已发生过碰撞 bug）。
 
 ---
 
