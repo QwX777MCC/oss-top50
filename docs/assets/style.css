@@ -93,7 +93,7 @@ h1{font-size:clamp(1.25rem,3vw,1.8rem);font-weight:600;letter-spacing:-.015em;ma
 .section-group{margin-bottom:44px}
 .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;scroll-margin-top:64px}
 .sec-head h3{font-size:1rem;font-weight:600}
-.sec-count{font-size:.72rem;color:var(--tx-f)}
+.sec-count{font-size:.68rem;color:var(--tx-f);background:var(--cvs);border:1px solid var(--bd);padding:2px 8px;border-radius:8px;white-space:nowrap;line-height:1.4}
 
 .repo-card{border:1px solid transparent;border-radius:var(--rl);margin-bottom:6px;position:relative;transition:all var(--tr)}
 .repo-card:hover{background:var(--crd-h);border-color:var(--bd)}
@@ -102,7 +102,7 @@ h1{font-size:clamp(1.25rem,3vw,1.8rem);font-weight:600;letter-spacing:-.015em;ma
 .repo-card:hover::before{opacity:1}
 
 .card-collapsed{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:start;padding:14px 16px}
-.rank-num{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:var(--rs);font-size:.82rem;font-weight:600;font-variant-numeric:tabular-nums;background:var(--crd-a);border:1px solid var(--bd);color:var(--tx-f);flex-shrink:0}
+.rank-num{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:var(--rs);font-size:.82rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;background:var(--crd-a);border:1px solid var(--bd);color:var(--tx-f);flex-shrink:0}
 .rank-num.t3{font-weight:700}
 
 .repo-info-c{min-width:0}
