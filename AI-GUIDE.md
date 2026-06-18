@@ -146,6 +146,20 @@ Actions 会自动：
 
 ---
 
+## 翻译约定
+
+### `desc_cn` 字段
+- 每个仓库除 `desc`（英文原文）外，多了 `desc_cn`（中文翻译）
+- `build_site.py` 优先展示 `desc_cn`；展开卡片中可点击「英文原文」查看原始 `desc`
+- `fetch_data.py` 保存新数据时自动保留已有的 `desc_cn`（不覆盖）
+
+### 如何添加新翻译
+1. 直接编辑 `data/alltime.json` 或 `data/recent.json`，在对应仓库对象中加 `"desc_cn": "中文描述"`
+2. 或运行 `python scripts/translate.py`，该脚本读取 data JSON，对缺失 `desc_cn` 的条目生成占位提示
+3. 翻译原则：1-2 句中文字，保留技术名词原文（如 "Claude Code" 不翻译），避免「最好的」「革命性的」等营销腔
+
+---
+
 ## 待优化项（Future Work）
 
 - [ ] 支持自定义域名绑定（GitHub Pages Settings → Custom domain）

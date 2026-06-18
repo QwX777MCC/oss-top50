@@ -18,7 +18,8 @@
       "tutorials"
     ],
     "license": "",
-    "stars_month": 5234
+    "stars_month": 5234,
+    "desc_cn": "通过从零重建你最喜欢的科技来掌握编程。"
   },
   {
     "name": "sindresorhus/awesome",
@@ -38,7 +39,8 @@
       "unicorns"
     ],
     "license": "CC0-1.0",
-    "stars_month": 3280
+    "stars_month": 3280,
+    "desc_cn": "各种有趣主题的精选 Awesome 列表合集。"
   },
   {
     "name": "freeCodeCamp/freeCodeCamp",
@@ -63,7 +65,8 @@
       "math"
     ],
     "license": "BSD-3-Clause",
-    "stars_month": 3213
+    "stars_month": 3213,
+    "desc_cn": "freeCodeCamp.org 的开源代码库和课程。免费学习数学、编程和计算机科学。"
   },
   {
     "name": "public-apis/public-apis",
@@ -88,7 +91,8 @@
       "public-api"
     ],
     "license": "MIT",
-    "stars_month": 3546
+    "stars_month": 3546,
+    "desc_cn": "免费 API 的汇总列表，供开发者快速查找可用的公共接口。"
   },
   {
     "name": "EbookFoundation/free-programming-books",
@@ -108,7 +112,8 @@
       "resource"
     ],
     "license": "CC-BY-4.0",
-    "stars_month": 2528
+    "stars_month": 2528,
+    "desc_cn": "免费获取的编程书籍大全。"
   },
   {
     "name": "openclaw/openclaw",
@@ -130,7 +135,8 @@
       "personal"
     ],
     "license": "NOASSERTION",
-    "stars_month": 55229
+    "stars_month": 55229,
+    "desc_cn": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ..."
   },
   {
     "name": "nilbuild/developer-roadmap",
@@ -155,7 +161,8 @@
       "java-roadmap"
     ],
     "license": "NOASSERTION",
-    "stars_month": 3172
+    "stars_month": 3172,
+    "desc_cn": "Interactive roadmaps, guides and other educational content to help developers grow in their careers...."
   },
   {
     "name": "donnemartin/system-design-primer",
@@ -180,7 +187,8 @@
       "system"
     ],
     "license": "NOASSERTION",
-    "stars_month": 3121
+    "stars_month": 3121,
+    "desc_cn": "学习如何设计大规模系统。为系统设计面试做准备。包含 Anki 记忆卡片。"
   },
   {
     "name": "jwasham/coding-interview-university",
@@ -205,7 +213,8 @@
       "programming-interviews"
     ],
     "license": "CC-BY-SA-4.0",
-    "stars_month": 2889
+    "stars_month": 2889,
+    "desc_cn": "一套完整的计算机科学学习计划，专为成为软件工程师而设计。"
   },
   {
     "name": "vinta/awesome-python",
@@ -226,7 +235,8 @@
       "python-tools"
     ],
     "license": "NOASSERTION",
-    "stars_month": 2081
+    "stars_month": 2081,
+    "desc_cn": "An opinionated list of Python frameworks, libraries, tools, and resources..."
   },
   {
     "name": "awesome-selfhosted/awesome-selfhosted",
@@ -249,7 +259,8 @@
       "selfhosted"
     ],
     "license": "NOASSERTION",
-    "stars_month": 2229
+    "stars_month": 2229,
+    "desc_cn": "A list of Free Software network services and web applications which can be hosted on your own servers..."
   },
   {
     "name": "996icu/996.ICU",
@@ -263,7 +274,8 @@
     "issues": 16693,
     "topics": [],
     "license": "NOASSERTION",
-    "stars_month": 3139
+    "stars_month": 3139,
+    "desc_cn": "Repo for counting stars and contributing. Press F to pay respect to glorious developers...."
   },
   {
     "name": "practical-tutorials/project-based-learning",
@@ -286,7 +298,8 @@
       "webdevelopment"
     ],
     "license": "MIT",
-    "stars_month": 2414
+    "stars_month": 2414,
+    "desc_cn": "精选项目教程列表，通过构建实际项目来学习编程。"
   },
   {
     "name": "react/react",
@@ -307,7 +320,8 @@
       "ui"
     ],
     "license": "MIT",
-    "stars_month": 1546
+    "stars_month": 1546,
+    "desc_cn": "The library for web and native user interfaces...."
   },
   {
     "name": "torvalds/linux",
@@ -321,7 +335,8 @@
     "issues": 3,
     "topics": [],
     "license": "NOASSERTION",
-    "stars_month": 1315
+    "stars_month": 1315,
+    "desc_cn": "Linux 内核源代码树。"
   },
   {
     "name": "obra/superpowers",
@@ -335,7 +350,8 @@
     "issues": 265,
     "topics": [],
     "license": "MIT",
-    "stars_month": 27522
+    "stars_month": 27522,
+    "desc_cn": "An agentic skills framework & software development methodology that works...."
   },
   {
     "name": "trimstray/the-book-of-secret-knowledge",
@@ -360,7 +376,8 @@
       "linux"
     ],
     "license": "MIT",
-    "stars_month": 2354
+    "stars_month": 2354,
+    "desc_cn": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more...."
   },
   {
     "name": "TheAlgorithms/Python",
@@ -385,7 +402,8 @@
       "practice"
     ],
     "license": "MIT",
-    "stars_month": 1838
+    "stars_month": 1838,
+    "desc_cn": "Python 实现的所有算法。"
   },
   {
     "name": "affaan-m/ECC",
@@ -408,7 +426,8 @@
       "productivity"
     ],
     "license": "MIT",
-    "stars_month": 43180
+    "stars_month": 43180,
+    "desc_cn": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencod..."
   },
   {
     "name": "vuejs/vue",
@@ -427,7 +446,8 @@
       "vue"
     ],
     "license": "MIT",
-    "stars_month": 1338
+    "stars_month": 1338,
+    "desc_cn": "一个渐进式 Java 框架，用于构建用户界面。"
   },
   {
     "name": "ossu/computer-science",
@@ -446,7 +466,8 @@
       "curriculum"
     ],
     "license": "MIT",
-    "stars_month": 1389
+    "stars_month": 1389,
+    "desc_cn": "🎓 Path to a free self-taught education in Computer Science!..."
   },
   {
     "name": "NousResearch/hermes-agent",
@@ -471,7 +492,8 @@
       "hermes"
     ],
     "license": "MIT",
-    "stars_month": 17788
+    "stars_month": 17788,
+    "desc_cn": "The agent that grows with you..."
   },
   {
     "name": "trekhleb/javascript-algorithms",
@@ -494,7 +516,8 @@
       "javascript-algorithms"
     ],
     "license": "MIT",
-    "stars_month": 1956
+    "stars_month": 1956,
+    "desc_cn": "基于 Java 的算法和数据结构示例及解释。"
   },
   {
     "name": "tensorflow/tensorflow",
@@ -517,7 +540,8 @@
       "tensorflow"
     ],
     "license": "Apache-2.0",
-    "stars_month": 1515
+    "stars_month": 1515,
+    "desc_cn": "面向所有人的开源机器学习框架。"
   },
   {
     "name": "ultraworkers/claw-code",
@@ -531,7 +555,8 @@
     "issues": 12,
     "topics": [],
     "license": "MIT",
-    "stars_month": 73666
+    "stars_month": 73666,
+    "desc_cn": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention...."
   },
   {
     "name": "n8n-io/n8n",
@@ -556,7 +581,8 @@
       "low-code"
     ],
     "license": "NOASSERTION",
-    "stars_month": 2268
+    "stars_month": 2268,
+    "desc_cn": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations...."
   },
   {
     "name": "ohmyzsh/ohmyzsh",
@@ -581,7 +607,8 @@
       "shell"
     ],
     "license": "MIT",
-    "stars_month": 919
+    "stars_month": 919,
+    "desc_cn": "一个令人愉快的社区驱动框架，用于管理 Zsh 配置。包含数千个有用的函数和插件。"
   },
   {
     "name": "microsoft/vscode",
@@ -601,7 +628,8 @@
       "visual-studio-code"
     ],
     "license": "MIT",
-    "stars_month": 1419
+    "stars_month": 1419,
+    "desc_cn": "Visual Studio Code。"
   },
   {
     "name": "Significant-Gravitas/AutoGPT",
@@ -626,7 +654,8 @@
       "openai"
     ],
     "license": "NOASSERTION",
-    "stars_month": 4664
+    "stars_month": 4664,
+    "desc_cn": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matter..."
   },
   {
     "name": "CyC2018/CS-Notes",
@@ -649,7 +678,8 @@
       "system-design"
     ],
     "license": "",
-    "stars_month": 1817
+    "stars_month": 1817,
+    "desc_cn": "技术面试必备基础知识，涵盖 Leetcode、操作系统、计算机网络、系统设计。"
   },
   {
     "name": "getify/You-Dont-Know-JS",
@@ -674,7 +704,8 @@
       "programming"
     ],
     "license": "NOASSERTION",
-    "stars_month": 1204
+    "stars_month": 1204,
+    "desc_cn": "深入理解 Java 核心机制的书系列。"
   },
   {
     "name": "jackfrued/Python-100-Days",
@@ -688,7 +719,8 @@
     "issues": 700,
     "topics": [],
     "license": "",
-    "stars_month": 1816
+    "stars_month": 1816,
+    "desc_cn": "Python 从新手到大师的 100 天学习计划。"
   },
   {
     "name": "massgravel/Microsoft-Activation-Scripts",
@@ -713,7 +745,8 @@
       "office365"
     ],
     "license": "GPL-3.0",
-    "stars_month": 2283
+    "stars_month": 2283,
+    "desc_cn": "Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting...."
   },
   {
     "name": "DigitalPlatDev/FreeDomain",
@@ -735,7 +768,8 @@
       "freedomain"
     ],
     "license": "AGPL-3.0",
-    "stars_month": 7154
+    "stars_month": 7154,
+    "desc_cn": "DigitalPlat FreeDomain: Free Domain For Everyone..."
   },
   {
     "name": "multica-ai/andrej-karpathy-skills",
@@ -749,7 +783,8 @@
     "issues": 120,
     "topics": [],
     "license": "",
-    "stars_month": 37546
+    "stars_month": 37546,
+    "desc_cn": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls...."
   },
   {
     "name": "flutter/flutter",
@@ -774,7 +809,8 @@
       "ios"
     ],
     "license": "BSD-3-Clause",
-    "stars_month": 1288
+    "stars_month": 1288,
+    "desc_cn": "Flutter 让你轻松快速地为移动端、Web 和桌面端构建精美的原生编译应用。"
   },
   {
     "name": "anomalyco/opencode",
@@ -788,7 +824,8 @@
     "issues": 7135,
     "topics": [],
     "license": "MIT",
-    "stars_month": 12735
+    "stars_month": 12735,
+    "desc_cn": "The open source coding agent...."
   },
   {
     "name": "avelino/awesome-go",
@@ -809,7 +846,8 @@
       "hacktoberfest"
     ],
     "license": "MIT",
-    "stars_month": 1208
+    "stars_month": 1208,
+    "desc_cn": "A curated list of awesome Go frameworks, libraries and software..."
   },
   {
     "name": "github/gitignore",
@@ -826,7 +864,8 @@
       "gitignore"
     ],
     "license": "CC0-1.0",
-    "stars_month": 918
+    "stars_month": 918,
+    "desc_cn": "A collection of useful .gitignore templates..."
   },
   {
     "name": "ollama/ollama",
@@ -851,7 +890,8 @@
       "llm"
     ],
     "license": "MIT",
-    "stars_month": 4809
+    "stars_month": 4809,
+    "desc_cn": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models...."
   },
   {
     "name": "twbs/bootstrap",
@@ -873,7 +913,8 @@
       "scss"
     ],
     "license": "MIT",
-    "stars_month": 962
+    "stars_month": 962,
+    "desc_cn": "最流行的 HTML、CSS 和 Java 框架，用于开发响应式、移动优先的 Web 项目。"
   },
   {
     "name": "yt-dlp/yt-dlp",
@@ -895,7 +936,8 @@
       "yt-dlp"
     ],
     "license": "Unlicense",
-    "stars_month": 2492
+    "stars_month": 2492,
+    "desc_cn": "A feature-rich command-line audio/video downloader..."
   },
   {
     "name": "f/prompts.chat",
@@ -920,7 +962,8 @@
       "llm"
     ],
     "license": "NOASSERTION",
-    "stars_month": 3808
+    "stars_month": 3808,
+    "desc_cn": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with c..."
   },
   {
     "name": "AUTOMATIC1111/stable-diffusion-webui",
@@ -945,7 +988,8 @@
       "stable-diffusion"
     ],
     "license": "AGPL-3.0",
-    "stars_month": 3519
+    "stars_month": 3519,
+    "desc_cn": "Stable Diffusion web UI..."
   },
   {
     "name": "521xueweihan/HelloGitHub",
@@ -964,7 +1008,8 @@
       "python"
     ],
     "license": "",
-    "stars_month": 1313
+    "stars_month": 1313,
+    "desc_cn": "分享 GitHub 上有趣、入门级的开源项目。"
   },
   {
     "name": "huggingface/transformers",
@@ -989,7 +1034,8 @@
       "natural-language-processing"
     ],
     "license": "Apache-2.0",
-    "stars_month": 1739
+    "stars_month": 1739,
+    "desc_cn": "Transformers：Pytorch、TensorFlow 和 JAX 的最先进机器学习模型。"
   },
   {
     "name": "jlevy/the-art-of-command-line",
@@ -1010,7 +1056,8 @@
       "windows"
     ],
     "license": "",
-    "stars_month": 1196
+    "stars_month": 1196,
+    "desc_cn": "Master the command line, in one page..."
   },
   {
     "name": "Snailclimb/JavaGuide",
@@ -1035,7 +1082,8 @@
       "redisson"
     ],
     "license": "Apache-2.0",
-    "stars_month": 1583
+    "stars_month": 1583,
+    "desc_cn": "Java 面试与后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发。"
   },
   {
     "name": "microsoft/markitdown",
@@ -1057,7 +1105,8 @@
       "pdf"
     ],
     "license": "MIT",
-    "stars_month": 8002
+    "stars_month": 8002,
+    "desc_cn": "Python tool for converting files and office documents to Markdown...."
   },
   {
     "name": "anthropics/skills",
@@ -1073,6 +1122,7 @@
       "agent-skills"
     ],
     "license": "",
-    "stars_month": 16975
+    "stars_month": 16975,
+    "desc_cn": "Public repository for Agent Skills..."
   }
 ]

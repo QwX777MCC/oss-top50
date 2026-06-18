@@ -113,15 +113,18 @@ INSIGHTS = {
 }
 
 def auto_insight(item):
-    desc = item.get('desc', '')
-    if desc:
-        sentences = re.split(r'[.。!！]', desc)
+    desc_cn = item.get('desc_cn', '')
+    if desc_cn:
+        sentences = re.split(r'[.。!！]', desc_cn)
         for s in sentences:
             s = s.strip()
-            if 15 < len(s) < 120:
+            if 10 < len(s) < 150:
                 return s
+        return desc_cn[:150] + '…'
+    desc = item.get('desc', '')
+    if desc:
         return desc[:120] + '…'
-    return '一个值得关注的 ' + (item.get('lang', '') or '') + ' 开源项目。'
+    return '暂无中文描述。'
 
 def auto_features(item):
     desc = item.get('desc', '')
@@ -141,6 +144,9 @@ def auto_features(item):
     return ', '.join(fs[:5])
 
 def auto_problem(item):
+    desc_cn = item.get('desc_cn', '')
+    if desc_cn:
+        return desc_cn[:150].rstrip('. ') + '…'
     desc = item.get('desc', '')
     if desc:
         return desc[:150].rstrip('. ') + '…'
@@ -155,7 +161,8 @@ for lst in [alltime, recent]:
             item['insight_data'] = {
                 'insight': auto_insight(item),
                 'problem': auto_problem(item),
-                'features': auto_features(item)
+                'features': auto_features(item),
+                'desc_en': item.get('desc', '')
             }
 
 def fmt(n): return f"{n:,}"
@@ -282,6 +289,7 @@ function render(items){{
           <div class="exp-insight">${{esc(ins.insight)}}</div>
           ${{ins.problem?'<div class="exp-section"><h4>🎯 解决的问题</h4><p>'+esc(ins.problem)+'</p></div>':''}}
           ${{ins.features?'<div class="exp-section"><h4>🔧 核心功能</h4><p>'+esc(ins.features)+'</p></div>':''}}
+          ${{r.desc&&r.desc.length>10?'<div class="exp-section"><details class="exp-original"><summary>📝 英文原文</summary><p>'+esc(r.desc)+'</p></details></div>':''}}
           <div class="exp-meta">
             <span>${{d<=14?'● 近两周活跃':(d<=60?'● '+d+'天前':'○ '+d+'天前更新')}}</span>
             <span>Fork ${{fn(r.forks)}}</span>

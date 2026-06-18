@@ -94,6 +94,10 @@ h1{font-size:1.8rem;font-weight:600;letter-spacing:-.015em;margin:0 0 6px}
 .exp-meta{display:flex;flex-wrap:wrap;gap:12px;font-size:.75rem;color:var(--tx-f);padding-top:12px;border-top:1px solid var(--bd);margin-top:12px}
 .exp-link{display:inline-flex;align-items:center;gap:4px;margin-top:10px;color:var(--tx-d);text-decoration:none;font-size:.8rem;border-bottom:1px dotted var(--tx-f)}
 .exp-link:hover{color:var(--tx)}
+.exp-original{margin-top:10px;font-size:.72rem;color:var(--tx-f)}
+.exp-original summary{cursor:pointer;color:var(--tx-d);user-select:none}
+.exp-original summary:hover{color:var(--tx)}
+.exp-original p{margin-top:4px;font-size:.72rem;font-style:italic;color:var(--tx-f);line-height:1.5}
 
 .empty-hint{text-align:center;padding:48px 20px;color:var(--tx-f);font-size:.9rem}
 

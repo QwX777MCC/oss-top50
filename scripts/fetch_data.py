@@ -75,6 +75,13 @@ def main():
     alltime = fetch("stars:>10000", sort="stars", per_page=50)
     compressed_all = compress(alltime['items'])
     path_all = os.path.join(DATA_DIR, 'alltime.json')
+    # Preserve existing desc_cn translations
+    if os.path.exists(path_all):
+        existing = json.load(open(path_all, 'r', encoding='utf-8'))
+        existing_map = {r['name']: r.get('desc_cn', '') for r in existing}
+        for r in compressed_all:
+            if r['name'] in existing_map and existing_map[r['name']]:
+                r['desc_cn'] = existing_map[r['name']]
     with open(path_all, 'w', encoding='utf-8') as f:
         json.dump(compressed_all, f, ensure_ascii=False, indent=2)
     print(f"  Saved {len(compressed_all)} repos to {path_all}")
@@ -84,6 +91,12 @@ def main():
     recent = fetch(f"created:2026-01-01..{today}", sort="stars", per_page=50)
     compressed_rec = compress(recent['items'])
     path_rec = os.path.join(DATA_DIR, 'recent.json')
+    if os.path.exists(path_rec):
+        existing = json.load(open(path_rec, 'r', encoding='utf-8'))
+        existing_map = {r['name']: r.get('desc_cn', '') for r in existing}
+        for r in compressed_rec:
+            if r['name'] in existing_map and existing_map[r['name']]:
+                r['desc_cn'] = existing_map[r['name']]
     with open(path_rec, 'w', encoding='utf-8') as f:
         json.dump(compressed_rec, f, ensure_ascii=False, indent=2)
     print(f"  Saved {len(compressed_rec)} repos to {path_rec}")

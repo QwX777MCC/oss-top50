@@ -20,7 +20,8 @@
       "productivity"
     ],
     "license": "MIT",
-    "stars_month": 43180
+    "stars_month": 43180,
+    "desc_cn": "Agent 代理性能优化系统。为 Claude Code、Codex、Opencode、Cursor 等提供技能、本能、记忆、安全和研究优先的开发支持。"
   },
   {
     "name": "ultraworkers/claw-code",
@@ -34,7 +35,8 @@
     "issues": 12,
     "topics": [],
     "license": "MIT",
-    "stars_month": 73666
+    "stars_month": 73666,
+    "desc_cn": "一个完全由 AI 代理管理并以 Rust 构建的博物馆展品，开发与维护全程无人类干预。"
   },
   {
     "name": "multica-ai/andrej-karpathy-skills",
@@ -48,7 +50,8 @@
     "issues": 120,
     "topics": [],
     "license": "",
-    "stars_month": 37546
+    "stars_month": 37546,
+    "desc_cn": "一个 CLAUDE.md 文件，用于改善 Claude Code 的行为，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。"
   },
   {
     "name": "mattpocock/skills",
@@ -62,7 +65,8 @@
     "issues": 79,
     "topics": [],
     "license": "MIT",
-    "stars_month": 29722
+    "stars_month": 29722,
+    "desc_cn": "为真正的工程师准备的技能包，直接来自 Matt Pocock 的 .claude 目录。"
   },
   {
     "name": "garrytan/gstack",
@@ -76,7 +80,8 @@
     "issues": 692,
     "topics": [],
     "license": "MIT",
-    "stars_month": 33639
+    "stars_month": 33639,
+    "desc_cn": "使用 Garry Tan 的 Claude Code 配置：23 个个性化的工具，涵盖 CEO、设计师、工程经理、发布经理、文档工程师和 QA 角色。"
   },
   {
     "name": "VoltAgent/awesome-design-md",
@@ -101,7 +106,8 @@
       "vibecoding"
     ],
     "license": "MIT",
-    "stars_month": 34593
+    "stars_month": 34593,
+    "desc_cn": "收集并分析热门品牌的 DESIGN.md 文件。将其中一个放入项目，让编码代理生成匹配的 UI。"
   },
   {
     "name": "karpathy/autoresearch",
@@ -115,7 +121,8 @@
     "issues": 194,
     "topics": [],
     "license": "",
-    "stars_month": 25209
+    "stars_month": 25209,
+    "desc_cn": "AI 代理在单 GPU 上自动运行 nanochat 训练的研究。"
   },
   {
     "name": "JuliusBrussee/caveman",
@@ -140,7 +147,8 @@
       "tokens"
     ],
     "license": "MIT",
-    "stars_month": 29646
+    "stars_month": 29646,
+    "desc_cn": "为什么用很多 token 而少 token 就能搞定——Claude Code 技能，用原始人说话方式削减 65% 的 token。"
   },
   {
     "name": "pewdiepie-archdaemon/odysseus",
@@ -154,7 +162,8 @@
     "issues": 1335,
     "topics": [],
     "license": "AGPL-3.0",
-    "stars_month": 73114
+    "stars_month": 73114,
+    "desc_cn": "自托管 AI 工作空间。"
   },
   {
     "name": "paperclipai/paperclip",
@@ -168,7 +177,8 @@
     "issues": 4827,
     "topics": [],
     "license": "MIT",
-    "stars_month": 19667
+    "stars_month": 19667,
+    "desc_cn": "十几亿人在工作中用来管理代理的开源应用。"
   },
   {
     "name": "safishamsi/graphify",
@@ -193,7 +203,8 @@
       "skills"
     ],
     "license": "MIT",
-    "stars_month": 27137
+    "stars_month": 27137,
+    "desc_cn": "AI 编码助手技能。将任何代码文件夹、SQL 模式、R 脚本、文档、论文、图片或视频转化为可查询的知识图谱。"
   },
   {
     "name": "nexu-io/open-design",
@@ -218,7 +229,8 @@
       "design-systems"
     ],
     "license": "Apache-2.0",
-    "stars_month": 39288
+    "stars_month": 39288,
+    "desc_cn": "本地优先的开源 Claude Design 替代方案。原生桌面应用，259+ 技能，142+ 设计系统，支持 Web/桌面/移动原型。"
   },
   {
     "name": "rtk-ai/rtk",
@@ -243,7 +255,8 @@
       "open-source"
     ],
     "license": "Apache-2.0",
-    "stars_month": 12933
+    "stars_month": 12933,
+    "desc_cn": "CLI 代理，将 LLM 在常见开发命令上的 token 消耗减少 60-90%。单个 Rust 二进制文件，零依赖。"
   },
   {
     "name": "Egonex-AI/Understand-Anything",
@@ -268,7 +281,8 @@
       "karpathy-llm-wiki"
     ],
     "license": "MIT",
-    "stars_month": 19857
+    "stars_month": 19857,
+    "desc_cn": "教学型图谱胜过炫耀型图谱。将任何代码转化为可探索、可搜索、可提问的交互式知识图谱。"
   },
   {
     "name": "addyosmani/agent-skills",
@@ -289,7 +303,8 @@
       "skills"
     ],
     "license": "MIT",
-    "stars_month": 15207
+    "stars_month": 15207,
+    "desc_cn": "AI 编码代理的生产级工程技能。"
   },
   {
     "name": "koala73/worldmonitor",
@@ -313,7 +328,8 @@
       "situation"
     ],
     "license": "NOASSERTION",
-    "stars_month": 10558
+    "stars_month": 10558,
+    "desc_cn": "实时全球情报仪表盘。AI 驱动的新闻聚合、地缘政治监控和基础设施追踪。"
   },
   {
     "name": "MemPalace/mempalace",
@@ -334,7 +350,8 @@
       "python"
     ],
     "license": "MIT",
-    "stars_month": 22641
+    "stars_month": 22641,
+    "desc_cn": "评测最佳的开源 AI 记忆系统，且完全免费。"
   },
   {
     "name": "santifer/career-ops",
@@ -359,7 +376,8 @@
       "interview-prep"
     ],
     "license": "MIT",
-    "stars_month": 21772
+    "stars_month": 21772,
+    "desc_cn": "基于 Claude Code 的 AI 驱动求职系统。14 种技能模式，Go 仪表盘，PDF 生成，批处理。"
   },
   {
     "name": "colbymchenry/codegraph",
@@ -373,7 +391,8 @@
     "issues": 265,
     "topics": [],
     "license": "MIT",
-    "stars_month": 10155
+    "stars_month": 10155,
+    "desc_cn": "预索引的代码知识图谱，在代码变更时自动同步。适用于 Claude Code、Codex、Gemini 等多个平台，减少 token 和工具调用。"
   },
   {
     "name": "VoltAgent/awesome-openclaw-skills",
@@ -398,7 +417,8 @@
       "moltbot-skills"
     ],
     "license": "MIT",
-    "stars_month": 10487
+    "stars_month": 10487,
+    "desc_cn": "OpenClaw 技能的精选合集。从官方注册表中筛选并分类的 5,400+ 技能。"
   },
   {
     "name": "chenglou/pretext",
@@ -412,7 +432,8 @@
     "issues": 83,
     "topics": [],
     "license": "MIT",
-    "stars_month": 14132
+    "stars_month": 14132,
+    "desc_cn": "快速、准确且全面的文本测量与布局工具。"
   },
   {
     "name": "Leonxlnx/taste-skill",
@@ -437,7 +458,8 @@
       "nocode"
     ],
     "license": "MIT",
-    "stars_month": 11610
+    "stars_month": 11610,
+    "desc_cn": "Taste-Skill — 赋予你的 AI 良好品味，阻止 AI 生成无聊、千篇一律的输出。"
   },
   {
     "name": "HKUDS/nanobot",
@@ -462,7 +484,8 @@
       "llm"
     ],
     "license": "MIT",
-    "stars_month": 9722
+    "stars_month": 9722,
+    "desc_cn": "轻量级开源 AI 代理，适用于工具、聊天和工作流。"
   },
   {
     "name": "mvanhorn/last30days-skill",
@@ -487,7 +510,8 @@
       "openclaw"
     ],
     "license": "MIT",
-    "stars_month": 9048
+    "stars_month": 9048,
+    "desc_cn": "AI 代理技能，研究 Reddit、X、YouTube、HN、Polymarket 等平台上的任何主题，并综合生成有据可依的摘要。"
   },
   {
     "name": "HKUDS/CLI-Anything",
@@ -501,7 +525,8 @@
     "issues": 59,
     "topics": [],
     "license": "Apache-2.0",
-    "stars_month": 12749
+    "stars_month": 12749,
+    "desc_cn": "CLI-Anything：让所有软件成为代理原生应用。"
   },
   {
     "name": "ZhuLinsen/daily_stock_analysis",
@@ -523,7 +548,8 @@
       "quantitative-trading"
     ],
     "license": "MIT",
-    "stars_month": 8110
+    "stars_month": 8110,
+    "desc_cn": "LLM 驱动的 A/H/美股智能分析系统：多数据源行情、实时新闻、LLM 决策仪表盘、多渠道推送，零成本定时运行。"
   },
   {
     "name": "sickn33/antigravity-awesome-skills",
@@ -548,7 +574,8 @@
       "claude-code-skills"
     ],
     "license": "MIT",
-    "stars_month": 7935
+    "stars_month": 7935,
+    "desc_cn": "可安装的 GitHub 技能库，包含 1,500+ AI 代理技能，适用于 Claude Code、Cursor、Codex CLI 等。"
   },
   {
     "name": "Hmbown/CodeWhale",
@@ -569,7 +596,8 @@
       "tui"
     ],
     "license": "MIT",
-    "stars_month": 7717
+    "stars_month": 7717,
+    "desc_cn": "开源、社区驱动的代理控制台。"
   },
   {
     "name": "multica-ai/multica",
@@ -583,7 +611,8 @@
     "issues": 989,
     "topics": [],
     "license": "NOASSERTION",
-    "stars_month": 7128
+    "stars_month": 7128,
+    "desc_cn": "开源的代理托管平台。将编码代理变为真正的队友——分配任务、追踪进度、积累技能。"
   },
   {
     "name": "Yeachan-Heo/oh-my-claudecode",
@@ -608,7 +637,8 @@
       "vibe-coding"
     ],
     "license": "MIT",
-    "stars_month": 6857
+    "stars_month": 6857,
+    "desc_cn": "Claude Code 的团队优先多代理编排工具。"
   },
   {
     "name": "vercel-labs/agent-browser",
@@ -622,7 +652,8 @@
     "issues": 529,
     "topics": [],
     "license": "Apache-2.0",
-    "stars_month": 6896
+    "stars_month": 6896,
+    "desc_cn": "AI 代理的浏览器自动化 CLI 工具。"
   },
   {
     "name": "kepano/obsidian-skills",
@@ -647,7 +678,8 @@
       "jsoncanvas"
     ],
     "license": "MIT",
-    "stars_month": 6465
+    "stars_month": 6465,
+    "desc_cn": "Obsidian 的代理技能。教会你的代理使用 Obsidian CLI 和开放格式，包括 Markdown、Bases 和 JSON Canvas。"
   },
   {
     "name": "Alishahryar1/free-claude-code",
@@ -661,7 +693,8 @@
     "issues": 320,
     "topics": [],
     "license": "MIT",
-    "stars_month": 7483
+    "stars_month": 7483,
+    "desc_cn": "在终端和 VSCode 扩展中免费使用 Claude Code 和 Codex，像 OpenClaw 一样支持语音。"
   },
   {
     "name": "rohitg00/ai-engineering-from-scratch",
@@ -686,7 +719,8 @@
       "llm"
     ],
     "license": "MIT",
-    "stars_month": 11126
+    "stars_month": 11126,
+    "desc_cn": "学习它、构建它、为他人交付它。"
   },
   {
     "name": "coreyhaines31/marketingskills",
@@ -704,7 +738,8 @@
       "marketing"
     ],
     "license": "MIT",
-    "stars_month": 6590
+    "stars_month": 6590,
+    "desc_cn": "Claude Code 和 AI 代理的营销技能。涵盖 CRO、文案、SEO、分析和增长工程。"
   },
   {
     "name": "Panniantong/Agent-Reach",
@@ -729,7 +764,8 @@
       "llm-tools"
     ],
     "license": "MIT",
-    "stars_month": 8769
+    "stars_month": 8769,
+    "desc_cn": "赋予你的 AI 代理观看整个互联网的眼睛。通过一个 CLI 工具阅读和搜索 Twitter、Reddit、YouTube、GitHub、B站、小红书等，零 API 费用。"
   },
   {
     "name": "tinyhumansai/openhuman",
@@ -743,7 +779,8 @@
     "issues": 142,
     "topics": [],
     "license": "GPL-3.0",
-    "stars_month": 8138
+    "stars_month": 8138,
+    "desc_cn": "你的个人 AI 超级智能。私密、简单且极其强大。"
   },
   {
     "name": "Imbad0202/academic-research-skills",
@@ -766,7 +803,8 @@
       "prompt-engineering"
     ],
     "license": "NOASSERTION",
-    "stars_month": 8704
+    "stars_month": 8704,
+    "desc_cn": "Claude Code 的学术研究技能：研究→写作→审阅→修订→定稿。"
   },
   {
     "name": "DietrichGebert/ponytail",
@@ -791,7 +829,8 @@
       "yagni"
     ],
     "license": "MIT",
-    "stars_month": 32111
+    "stars_month": 32111,
+    "desc_cn": "让你的 AI 代理像房间里最懒的高级开发一样思考。最好的代码是你没写过的代码。"
   },
   {
     "name": "zeroclaw-labs/zeroclaw",
@@ -814,7 +853,8 @@
       "zeroclaw"
     ],
     "license": "Apache-2.0",
-    "stars_month": 7665
+    "stars_month": 7665,
+    "desc_cn": "快速、小型、完全自主的 AI 个人助理基础设施，任何操作系统、任何平台——随处部署，随意替换。"
   },
   {
     "name": "chopratejas/headroom",
@@ -839,7 +879,8 @@
       "langchain"
     ],
     "license": "Apache-2.0",
-    "stars_month": 5877
+    "stars_month": 5877,
+    "desc_cn": "在输出到达 LLM 之前压缩工具输出、日志、文件和 RAG 块。减少 60-95% 的 token，答案不变。"
   },
   {
     "name": "anthropics/financial-services",
@@ -853,7 +894,8 @@
     "issues": 166,
     "topics": [],
     "license": "Apache-2.0",
-    "stars_month": 8241
+    "stars_month": 8241,
+    "desc_cn": "（Anthropic 金融服务相关项目）"
   },
   {
     "name": "hesamsheikh/awesome-openclaw-usecases",
@@ -876,7 +918,8 @@
       "usecase"
     ],
     "license": "MIT",
-    "stars_month": 7243
+    "stars_month": 7243,
+    "desc_cn": "社区收集的 OpenClaw 使用案例，让生活更轻松。"
   },
   {
     "name": "Yeachan-Heo/oh-my-codex",
@@ -890,7 +933,8 @@
     "issues": 6,
     "topics": [],
     "license": "",
-    "stars_month": 6849
+    "stars_month": 6849,
+    "desc_cn": "OmX — 你的 Codex 不孤单。添加 hook、代理团队、HUD 等更多功能。"
   },
   {
     "name": "jamiepine/voicebox",
@@ -913,7 +957,8 @@
       "whisper"
     ],
     "license": "MIT",
-    "stars_month": 6312
+    "stars_month": 6312,
+    "desc_cn": "开源 AI 语音工作室。克隆、听写、创作。"
   },
   {
     "name": "nanocoai/nanoclaw",
@@ -933,7 +978,8 @@
       "openclaw"
     ],
     "license": "MIT",
-    "stars_month": 6501
+    "stars_month": 6501,
+    "desc_cn": "OpenClaw 的轻量级替代方案，在容器中运行以保障安全。连接 WhatsApp、Telegram、Slack、Discord、Gmail 等。"
   },
   {
     "name": "sipeed/picoclaw",
@@ -947,7 +993,8 @@
     "issues": 67,
     "topics": [],
     "license": "MIT",
-    "stars_month": 6591
+    "stars_month": 6591,
+    "desc_cn": "小巧、快速、可随处部署——自动化繁重任务，释放创造力。"
   },
   {
     "name": "Gitlawb/openclaude",
@@ -967,7 +1014,8 @@
       "coding"
     ],
     "license": "NOASSERTION",
-    "stars_month": 11176
+    "stars_month": 11176,
+    "desc_cn": "随处运行，使用任何东西。"
   },
   {
     "name": "Leey21/awesome-ai-research-writing",
@@ -981,7 +1029,8 @@
     "issues": 15,
     "topics": [],
     "license": "",
-    "stars_month": 6208
+    "stars_month": 6208,
+    "desc_cn": "提升你的 AI 研究写作水平，不再繁琐打磨。"
   },
   {
     "name": "heygen-com/hyperframes",
@@ -1006,6 +1055,7 @@
       "typescript"
     ],
     "license": "Apache-2.0",
-    "stars_month": 8544
+    "stars_month": 8544,
+    "desc_cn": "写 HTML，生成视频。为代理而生。"
   }
 ]
