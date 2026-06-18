@@ -120,6 +120,7 @@ oss-top50/
 ├── docs/                     # GitHub Pages 源
 │   ├── index.html
 │   ├── top50.html            # 由 build_site.py 生成
+│   ├── tech-stack.html       # 技术栈学习文档
 │   └── assets/style.css
 ├── .github/workflows/
 │   └── update.yml            # 手动触发 CI

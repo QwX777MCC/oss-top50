@@ -26,6 +26,7 @@ oss-top50/
 ├── docs/                     ← GitHub Pages 发布目录
 │   ├── index.html            ← 首页（导航入口）
 │   ├── top50.html            ← 榜单主页面（build_site.py 生成，勿手动编辑！）
+│   ├── tech-stack.html       ← 技术栈学习文档（手写，教学向）
 │   └── assets/
 │       └── style.css         ← 共享样式（所有页面共用）
 ├── .github/workflows/
