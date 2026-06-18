@@ -65,6 +65,12 @@
 [data-theme="dark"] .novice-box .nb-label{
   color:oklch(0.55 0.06 95)
 }
+[data-theme="light"] .novice-box{
+  background:oklch(0.97 0.01 95);border-color:oklch(0.88 0.03 95)
+}
+[data-theme="light"] .novice-box .nb-label{
+  color:oklch(0.45 0.08 95)
+}
 .novice-box .nb-label{
   font-size:.68rem;font-weight:600;letter-spacing:.06em;
   text-transform:uppercase;color:oklch(0.45 0.08 95);
@@ -495,7 +501,7 @@ steps:
 </footer>
 
 </div>
-<button class="theme-toggle" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'':'dark'" title="切换明暗模式">☀</button>
+<button class="theme-toggle" onclick="var d=document.documentElement;d.dataset.theme=d.dataset.theme==='dark'?'light':d.dataset.theme==='light'?null:'dark'" title="切换模式：自动→暗色→亮色">◐</button>
 <a class="back-top" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" title="回到顶部">▲</a>
 <script>(function(){var b=document.querySelector('.back-top');if(b){window.addEventListener('scroll',function(){b.classList.toggle('show',(window.pageYOffset||document.documentElement.scrollTop)>300)},{passive:true})}})()</script>
 </body>
