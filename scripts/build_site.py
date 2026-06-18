@@ -296,7 +296,7 @@ function render(items){{
         <div class="card-collapsed">
           <div class="rank-num ${{r.ri<=3?'t3':''}}" style="${{r.ri<=3?'color:'+clr+';':''}}">#${{r.ri}}</div>
           <div class="repo-info-c">
-            <span class="repo-name-c">${{esc(r.name)}}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+            <span class="repo-name-c">${{esc(r.name)}}</span>
             <div class="repo-one-liner">${{esc(ins.insight||ins.problem||r.desc||'')}}</div>
             ${{r.topics&&r.topics.length?'<div class="repo-tags-row">'+r.topics.slice(0,5).map(t=>`<span>${{esc(t)}}</span>`).join('')+'</div>':''}}
           </div>
