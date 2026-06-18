@@ -59,6 +59,12 @@
     color:oklch(0.55 0.06 95)
   }
 }
+[data-theme="dark"] .novice-box{
+  background:oklch(0.22 0.01 95);border-color:oklch(0.28 0.02 95)
+}
+[data-theme="dark"] .novice-box .nb-label{
+  color:oklch(0.55 0.06 95)
+}
 .novice-box .nb-label{
   font-size:.68rem;font-weight:600;letter-spacing:.06em;
   text-transform:uppercase;color:oklch(0.45 0.08 95);
@@ -489,5 +495,6 @@ steps:
 </footer>
 
 </div>
+<button class="theme-toggle" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'':'dark'" title="切换明暗模式">☀</button>
 </body>
 </html>

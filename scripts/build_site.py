@@ -357,6 +357,7 @@ function setSort(t){{
 
 doSort();buildOpts();render(data)
 </script>
+<button class="theme-toggle" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'':'dark'" title="切换明暗模式">☀</button>
 </body>
 </html>'''
 
