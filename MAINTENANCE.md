@@ -34,7 +34,7 @@
 | # | 项目 | 说明 |
 |---|------|------|
 | 1 | **Windows SSH 私钥权限** | Git Bash `chmod 600` 不生效，需 PowerShell `icacls` 真正限制。当前单用户系统风险极低但不符合安全规范 |
-| 2 | **GitHub Actions 改用官方 deploy-pages** | 当前 `peaceiris/actions-gh-pages@v3` 是第三方 Action，应切到 `actions/deploy-pages` |
+| 2 | ~~GitHub Actions 改用官方 deploy-pages~~ | ✅ 已迁移到 `actions/deploy-pages@v4`（2026-06-19） |
 | 3 | **Pages 部署验证** | 推送后无自动检查 Pages 是否上线成功，建议 CI 增加 `curl` 验证步骤 |
 
 ### P2 - 可规划（时机合适时）

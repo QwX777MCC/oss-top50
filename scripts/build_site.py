@@ -28,6 +28,9 @@ def validate_data(data, label):
 validate_data(alltime, 'alltime')
 validate_data(recent, 'recent')
 
+# 领域自动分类：if-elif 链，按优先级顺序匹配关键词
+# 优先匹配高特异性类别（AI Agent），再匹配通用类别（AI/ML）
+# 修改关键词时注意顺序敏感，排前面的优先命中
 def classify_field(item):
     name = item['name'].lower()
     desc = item.get('desc', '').lower()

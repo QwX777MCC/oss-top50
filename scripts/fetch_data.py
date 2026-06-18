@@ -98,10 +98,11 @@ def main():
     path_rec = os.path.join(DATA_DIR, 'recent.json')
     if os.path.exists(path_rec):
         existing = json.load(open(path_rec, 'r', encoding='utf-8'))
-        existing_map = {r['name']: r.get('desc_cn', '') for r in existing}
+        existing_map = {r['name']: {'desc_cn': r.get('desc_cn', ''), 'source': r.get('desc_cn_source', '')} for r in existing}
         for r in compressed_rec:
-            if r['name'] in existing_map and existing_map[r['name']]:
-                r['desc_cn'] = existing_map[r['name']]
+            if r['name'] in existing_map and existing_map[r['name']]['desc_cn']:
+                r['desc_cn'] = existing_map[r['name']]['desc_cn']
+                r['desc_cn_source'] = existing_map[r['name']]['source']
     with open(path_rec, 'w', encoding='utf-8') as f:
         json.dump(compressed_rec, f, ensure_ascii=False, indent=2)
     print(f"  Saved {len(compressed_rec)} repos to {path_rec}")

@@ -9,7 +9,7 @@
   /* 字体 */
   --font:-apple-system,"Segoe UI","PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
   --mono:"SF Mono","Fira Code","Cascadia Code",monospace;
-  /* 断点（文档参考，CSS @media 不支持 var()，手动保持一致） */
+  /* 断点（仅供文档参考！CSS @media 不支持 var()，修改断点请搜索 @media 替换） */
   --bp-xs:380px;--bp-sm:420px;--bp-md:768px;--bp-lg:1060px;--bp-xl:1600px
 }
 @media(prefers-color-scheme:dark){
