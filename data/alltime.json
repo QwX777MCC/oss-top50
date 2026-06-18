@@ -334,8 +334,8 @@
     ],
     "license": "MIT",
     "stars_month": 1546,
-    "desc_cn": "The library for web and native user interfaces....",
-    "desc_cn_source": "auto"
+    "desc_cn": "React —— 构建 Web 与原生用户界面的前端库",
+    "desc_cn_source": "manual"
   },
   {
     "name": "torvalds/linux",
@@ -802,8 +802,8 @@
     ],
     "license": "AGPL-3.0",
     "stars_month": 7154,
-    "desc_cn": "DigitalPlat FreeDomain: Free Domain For Everyone...",
-    "desc_cn_source": "auto"
+    "desc_cn": "DigitalPlat FreeDomain：人人可用的免费域名服务",
+    "desc_cn_source": "manual"
   },
   {
     "name": "multica-ai/andrej-karpathy-skills",
@@ -903,8 +903,8 @@
     ],
     "license": "CC0-1.0",
     "stars_month": 918,
-    "desc_cn": "A collection of useful .gitignore templates...",
-    "desc_cn_source": "auto"
+    "desc_cn": "GitHub 官方整理的一套 .gitignore 模板合集，覆盖几乎所有语言和框架",
+    "desc_cn_source": "manual"
   },
   {
     "name": "ollama/ollama",
@@ -1103,8 +1103,8 @@
     ],
     "license": "",
     "stars_month": 1196,
-    "desc_cn": "Master the command line, in one page...",
-    "desc_cn_source": "auto"
+    "desc_cn": "一页纸掌握命令行 —— 从基础到进阶的速查手册",
+    "desc_cn_source": "manual"
   },
   {
     "name": "Snailclimb/JavaGuide",
@@ -1172,7 +1172,7 @@
     ],
     "license": "",
     "stars_month": 16975,
-    "desc_cn": "Public repository for Agent Skills...",
-    "desc_cn_source": "auto"
+    "desc_cn": "Anthropic 公开的 Agent Skills 仓库",
+    "desc_cn_source": "manual"
   }
 ]
