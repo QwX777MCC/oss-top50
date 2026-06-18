@@ -1,0 +1,47 @@
+name: Update Rankings
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '更新原因'
+        required: false
+        default: '手动触发数据更新'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch latest data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_data.py
+
+      - name: Build site
+        run: python scripts/build_site.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "oss-top50-bot"
+          git config user.email "bot@oss-top50.dev"
+          git add data/ docs/
+          git diff --staged --quiet || git commit -m "data: manual update $(date +%Y-%m-%d)"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          force_orphan: true
