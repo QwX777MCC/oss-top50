@@ -211,6 +211,7 @@ html = f'''<!DOCTYPE html>
 <div class="wrap">
 
 <header>
+<a class="home-link" href="./">← 首页</a>
 <div class="eyebrow">GitHub Archive · 开源风向标</div>
 <h1>最强开源项目 Top 50 双榜</h1>
 <div class="subtitle">全期经典对照近半年爆发 · 点击卡片展开深度解析 · 每条可溯源</div>
