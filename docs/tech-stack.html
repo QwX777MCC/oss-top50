@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>oss-top50 技术栈全览 · 学习笔记</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ── 技术文档专属样式 ── */
+.ts-wrap{max-width:860px;margin:0 auto}
+.ts-section{margin-bottom:48px}
+.ts-section h2{
+  font-size:1.35rem;font-weight:600;color:var(--tx);
+  padding-bottom:8px;margin-bottom:20px;
+  border-bottom:1.5px solid var(--bd);
+  display:flex;align-items:center;gap:10px
+}
+.ts-section h2 .num{
+  font-size:.72rem;font-weight:500;color:var(--tx-f);
+  background:var(--crd);border:1px solid var(--bd);
+  padding:2px 10px;border-radius:12px;white-space:nowrap
+}
+.ts-section h3{
+  font-size:1.05rem;font-weight:600;color:var(--tx);
+  margin:24px 0 10px
+}
+.ts-section h4{
+  font-size:.88rem;font-weight:600;color:var(--tx-d);
+  margin:16px 0 6px
+}
+.ts-section p,.ts-section li{
+  font-size:.86rem;line-height:1.72;color:var(--tx-d);margin-bottom:8px
+}
+.ts-section ul{margin-left:18px;margin-bottom:12px}
+.ts-section li{margin-bottom:4px}
+/* 代码块 */
+.ts-section pre{
+  background:var(--crd);border:1px solid var(--bd);
+  border-radius:var(--r);padding:14px 16px;
+  font-size:.78rem;line-height:1.65;
+  overflow-x:auto;margin:10px 0 16px;
+  font-family:var(--mono)
+}
+.ts-section code{
+  font-family:var(--mono);font-size:.8rem;
+  background:var(--crd-h);padding:1px 5px;border-radius:3px
+}
+.ts-section pre code{background:none;padding:0;font-size:inherit}
+/* 新手解读卡片 */
+.novice-box{
+  background:oklch(0.97 0.01 95);border:1px solid oklch(0.88 0.03 95);
+  border-radius:var(--rl);padding:14px 18px;margin:18px 0 8px
+}
+@media(prefers-color-scheme:dark){
+  .novice-box{
+    background:oklch(0.22 0.01 95);border-color:oklch(0.28 0.02 95)
+  }
+}
+.novice-box .nb-label{
+  font-size:.68rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:oklch(0.45 0.08 95);
+  margin-bottom:6px
+}
+.novice-box p{font-size:.82rem;line-height:1.68;color:var(--tx-d);margin:0}
+.novice-box p+p{margin-top:6px}
+/* 术语表 */
+.term-table{width:100%;border-collapse:collapse;margin:12px 0 18px;font-size:.82rem}
+.term-table th,.term-table td{
+  padding:8px 12px;border-bottom:1px solid var(--bd);
+  text-align:left;line-height:1.6
+}
+.term-table th{font-size:.7rem;color:var(--tx-f);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.term-table td:first-child{font-weight:600;color:var(--tx);white-space:nowrap}
+.term-table td:last-child{color:var(--tx-d)}
+/* 架构图 */
+.arch-diagram{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:6px;margin:16px 0 24px
+}
+.arch-block{
+  background:var(--crd);border:1px solid var(--bd);
+  border-radius:var(--r);padding:14px 10px;text-align:center
+}
+.arch-block .ab-title{font-size:.78rem;font-weight:600;color:var(--tx);margin-bottom:4px}
+.arch-block .ab-tech{font-size:.68rem;color:var(--tx-f);line-height:1.5}
+.arch-block .ab-icon{font-size:1.4rem;margin-bottom:4px}
+@media(max-width:768px){
+  .arch-diagram{grid-template-columns:repeat(2,1fr)}
+  .ts-section h2{font-size:1.2rem}
+}
+@media(max-width:420px){
+  .arch-diagram{grid-template-columns:1fr}
+  .ts-section pre{font-size:.7rem;padding:10px 12px}
+  .term-table th,.term-table td{padding:6px 8px;font-size:.74rem}
+}
+/* 快捷键 */
+.shortcut{display:inline-flex;align-items:center;gap:3px}
+.shortcut kbd{
+  display:inline-block;padding:1px 6px;font-size:.72rem;
+  background:var(--crd);border:1px solid var(--bd);
+  border-radius:3px;font-family:var(--mono);line-height:1.6
+}
+</style>
+</head>
+<body>
+<div class="wrap ts-wrap">
+
+<header>
+<div class="eyebrow">Learning Notes · 技术栈梳理</div>
+<h1>oss-top50 技术栈全览</h1>
+<div class="subtitle">从零开始理解一个完整的前端项目：数据获取 → 脚本构建 → 静态页面 → 自动部署。每个层次配新手解读，边看边学。</div>
+</header>
+
+<!-- ═══════════ 一、项目全景 ═══════════ -->
+<section class="ts-section">
+<h2><span class="num">一</span> 项目全景图</h2>
+
+<h3>一句话定义</h3>
+<p>一个<strong>纯静态</strong>的 GitHub 开源项目排行榜页面——列出全期和近半年 Star 最高的 50 个仓库，支持按领域/语言筛选，点击卡片展开深度分析。从数据抓取到上线部署，<strong>全链路自动化</strong>。</p>
+
+<h3>四层架构</h3>
+<div class="arch-diagram">
+  <div class="arch-block">
+    <div class="ab-icon">📡</div>
+    <div class="ab-title">数据层</div>
+    <div class="ab-tech">GitHub API<br>Python · requests</div>
+  </div>
+  <div class="arch-block">
+    <div class="ab-icon">🔧</div>
+    <div class="ab-title">构建层</div>
+    <div class="ab-tech">Python 脚本<br>数据校验 · 分类 · 渲染</div>
+  </div>
+  <div class="arch-block">
+    <div class="ab-icon">🎨</div>
+    <div class="ab-title">展示层</div>
+    <div class="ab-tech">HTML · CSS · JS<br>纯静态 · 零框架</div>
+  </div>
+  <div class="arch-block">
+    <div class="ab-icon">🚀</div>
+    <div class="ab-title">部署层</div>
+    <div class="ab-tech">GitHub Pages<br>Actions · CI/CD</div>
+  </div>
+</div>
+
+<h3>为什么叫"纯静态"？</h3>
+<p>浏览器打开页面后，<strong>不再向任何服务器发请求</strong>。所有数据（100 个仓库的信息）已经提前写好、塞在 HTML 里了。这和常见的"前端调后端 API"模式完全不同——页面本身就是一个自给自足的完整产品。</p>
+
+<div class="novice-box">
+<div class="nb-label">新手解读</div>
+<p><strong>什么是"静态网站"？</strong> 你平时刷的淘宝、微博，每次打开页面都会向服务器要数据（又叫"动态渲染"）。静态网站恰恰相反：所有内容在部署之前就已经生成好了，服务器只是把文件原样"递"给你。好处是极快（不需要等数据库查询）、极稳（没有后端崩不崩的问题）、极便宜（GitHub Pages 免费）。这个项目就是静态网站的典型代表。</p>
+</div>
+</section>
+
+<!-- ═══════════ 二、数据层 ═══════════ -->
+<section class="ts-section">
+<h2><span class="num">二</span> 数据层：Python + GitHub API</h2>
+
+<h3>数据从哪里来？</h3>
+<p>GitHub 提供了一个叫 <strong>Search API</strong> 的接口，允许你像搜索引擎一样查询仓库。我们用两条查询就够了：</p>
+<ul>
+  <li><code>stars:&gt;10000 sort:stars</code> → 全时期 Star 最高的 50 个仓库</li>
+  <li><code>created:2026-01-01..2026-06-18 sort:stars</code> → 近半年创建的新仓库中 Star 最高的 50 个</li>
+</ul>
+
+<h3>fetch_data.py 做了什么？</h3>
+<p>这个脚本（Python）做的事情非常直接：</p>
+<pre><code># 步骤 1：带着 Token 调 GitHub API
+resp = requests.get("https://api.github.com/search/repositories",
+                     headers={"Authorization": f"token {TOKEN}"},
+                     params={"q": "stars:>10000", "sort": "stars", "per_page": 50})
+
+# 步骤 2：从返回的 JSON 中只取我们需要的字段
+compressed = []
+for repo in resp.json()['items']:
+    compressed.append({
+        'name': repo['full_name'],      # 仓库名，如 "freeCodeCamp/freeCodeCamp"
+        'stars': repo['stargazers_count'],  # Star 数
+        'desc': repo['description'],    # 项目描述
+        'lang': repo['language'],       # 主要编程语言
+        'created': repo['created_at'][:10],  # 创建日期（只取年月日）
+        'topics': repo['topics'][:10],  # 标签（最多保留 10 个）
+        'stars_month': round(stars / months),  # 计算月均 Star 增速
+        # ... 还有 url、forks、license 等
+    })
+
+# 步骤 3：如果之前有中文翻译，保留不覆盖
+if os.path.exists('data/alltime.json'):
+    读旧文件 → 匹配 desc_cn → 写入新文件
+
+# 步骤 4：保存到 data/ 目录
+json.dump(compressed, open('data/alltime.json', 'w'), indent=2)</code></pre>
+
+<h3>关键字段速查</h3>
+<table class="term-table">
+<tr><th>字段</th><th>含义</th><th>用途</th></tr>
+<tr><td><code>name</code></td><td>仓库全名（owner/repo）</td><td>卡片的项目标题</td></tr>
+<tr><td><code>stars</code></td><td>Star 总数</td><td>排序依据 + 进度条宽度 + 统计面板</td></tr>
+<tr><td><code>desc / desc_cn</code></td><td>项目描述（英文/中文）</td><td>卡片副标题 → 展开详情的主要来源</td></tr>
+<tr><td><code>lang</code></td><td>主要编程语言</td><td>筛选器"语言"下拉选项</td></tr>
+<tr><td><code>topics</code></td><td>GitHub 标签（数组）</td><td>卡片底部标签行</td></tr>
+<tr><td><code>stars_month</code></td><td>月均 Star 增速（计算得出）</td><td>"月增速"排序 + 展开区元数据</td></tr>
+<tr><td><code>created / pushed</code></td><td>创建日期 / 最后推送日期</td><td>"最近更新"排序 + 活跃度判断</td></tr>
+<tr><td><code>license</code></td><td>许可证类型（MIT/Apache 等）</td><td>展开区元数据</td></tr>
+</table>
+
+<div class="novice-box">
+<div class="nb-label">新手解读</div>
+<p><strong>JSON 是什么？</strong> JSON（JavaScript Object Notation）是一种纯文本的数据格式，长得像 Python 的字典。它是互联网上最通用的数据交换格式——GitHub API 返回的是 JSON，我们保存的也是 JSON，浏览器里的 JS 直接就能读。它比 Excel 更适合程序处理，比数据库更轻量。<br><br>
+<strong>为什么要"数据与展示分离"？</strong> 在这个项目里，data/ 只管"有什么数据"，docs/ 只管"怎么展示"。当你只需要更新数据时，跑 fetch_data.py 就行；只需要改样式时，改 style.css 就行——两者互不干扰。这是软件工程里最基础的"关注点分离"原则。</p>
+</div>
+</section>
+
+<!-- ═══════════ 三、构建层 ═══════════ -->
+<section class="ts-section">
+<h2><span class="num">三</span> 构建层：Python 脚本生成 HTML</h2>
+
+<h3>build_site.py 的四步流水线</h3>
+
+<h4>第一步：数据校验（validate_data）</h4>
+<p>读入 JSON 后，先检查数据是不是"坏的"——空列表？缺少关键字段？Stars 不是数字？任何一个问题都会让脚本直接报错退出，拒绝生成残缺的页面。</p>
+<pre><code>def validate_data(data, label):
+    if len(data) == 0:
+        raise ValueError(f"{label}: empty dataset")
+    for repo in data:
+        if 'name' not in repo or repo['name'] is None:
+            raise ValueError(f"missing required field 'name'")</code></pre>
+
+<h4>第二步：领域自动分类（classify_field）</h4>
+<p>把仓库名 + 描述 + 标签拼成一个字符串，用关键词匹配判断它属于 9 个领域中的哪一个。比如：</p>
+<pre><code># 如果匹配到 "react"、"vue"、"tailwind" 等 → Web前端
+# 如果匹配到 "machine learning"、"pytorch"、"llm" 等 → AI/ML
+# 如果匹配到 "docker"、"kubernetes"、"linux" 等 → DevOps
+# 都不匹配 → 开发工具（兜底分类）</code></pre>
+
+<h4>第三步：匹配洞察（INSIGHTS 字典）</h4>
+<p>14 个重点仓库（如 freeCodeCamp、awesome、build-your-own-x 等）有<strong>人工撰写的三层洞察</strong>：深入分析 / 解决的问题 / 核心功能。其余 86 个仓库由 auto_insight() 和 auto_features() 自动提取描述。</p>
+<pre><code>INSIGHTS = {
+    'freeCodeCamp/freeCodeCamp': {
+        'insight': '编程教育界的"免费替代一切付费 bootcamp"...',
+        'problem': '编程教育资源要么免费但零散，要么系统但昂贵...',
+        'features': '11 个完整的认证课程；交互式编程练习环境...'
+    },
+    # ... 共 14 个
+}</code></pre>
+
+<h4>第四步：渲染 HTML</h4>
+<p>使用 Python 的 f-string（字符串模板），把数据、分类、洞察、CSS 全部拼成一个完整的 HTML 文件。其中数据被序列化为 JS 常量嵌入：</p>
+<pre><code>const ALLTIME = [
+  {"name":"freeCodeCamp/freeCodeCamp","stars":425341,"desc":"...",...},
+  ...共50条
+];
+const RECENT = [ ...共50条... ];</code></pre>
+
+<h3>为什么要塞进 HTML 里？</h3>
+<p>这是关键设计决策。如果页面每次打开都要调 GitHub API：</p>
+<ul>
+  <li>用户要等网络请求（慢）</li>
+  <li>API 有频率限制（无 Token 时每小时只能 60 次）</li>
+  <li>GitHub API 可能挂掉（页面跟着崩）</li>
+  <li>移动端网络不稳定时体验差</li>
+</ul>
+<p>把数据内嵌后，页面打开即用，筛选/排序/展开全部在浏览器内存里完成，<strong>0 次网络请求</strong>。</p>
+
+<div class="novice-box">
+<div class="nb-label">新手解读</div>
+<p><strong>"静态网站生成"是什么？</strong> 它的本质是：用脚本（Python/Node/Go 等）在部署之前把数据 + 模板"编译"成纯 HTML。你看到的 top50.html 不是人手写的——是 build_site.py 自动"打印"出来的。这和你熟悉的 React/Vue 有本质区别：React 是浏览器里"现拼"页面（客户端渲染），我们是提前拼好再给浏览器（预渲染）。好处是绝对速度、绝对稳定性、绝对简单。<br><br>
+<strong>数据内嵌 vs 调 API：</strong> 想象你要给朋友看 50 本书的清单——你可以每次他问你"第 3 本是什么"就翻一次书架（调 API），也可以直接把清单打印出来给他（数据内嵌）。后者当然更快更靠谱。代价是数据"冻"在生成那一刻，需要更新时重新跑脚本。</p>
+</div>
+</section>
+
+<!-- ═══════════ 四、前端层 ═══════════ -->
+<section class="ts-section">
+<h2><span class="num">四</span> 前端层：HTML + CSS + 原生 JS</h2>
+
+<h3>零框架依赖意味着什么？</h3>
+<p>这个项目没有用 React、Vue、jQuery、Bootstrap、Tailwind——<strong>什么都没有</strong>。浏览器原生支持什么，我们就用什么。好处是：不需要 npm install、不需要打包工具、不需要学框架 API、代码量极少（整个页面约 360 行），任何懂 HTML 的人都能直接改。</p>
+
+<h3>CSS 设计系统拆解</h3>
+
+<h4>莫兰迪高级灰调色板（CSS 变量）</h4>
+<p>所有颜色都定义在 <code>:root</code> 的 CSS 变量中，绝不使用硬编码色值：</p>
+<pre><code>:root {
+  --cvs: #f5f3f0;   /* 画布底色：带暖意的灰白 */
+  --crd: #fdfcfa;   /* 卡片底色：比画布稍亮 */
+  --tx:  #3d3832;   /* 正文色：接近黑但不是纯黑 */
+  --tx-d:#7a736b;   /* 次要文字 */
+  --tx-f:#b0a89e;   /* 辅助文字（最淡） */
+  --bd:  #e0dbd4;   /* 边框色 */
+}</code></pre>
+<p>这 6 个变量构成了完整的视觉层级——从最亮（卡片）到最暗（正文），中间通过边框和辅助色过渡。<strong>所有颜色都偏灰</strong>，没有高饱和度的"刺眼"色。</p>
+
+<h4>明暗双模自动切换</h4>
+<pre><code>@media (prefers-color-scheme: dark) {
+  :root {
+    --cvs: #2a2825;  /* 暗色画布 */
+    --crd: #33302d;  /* 暗色卡片 */
+    --tx:  #e8e4df;  /* 亮色正文 */
+    /* ...全部变量翻转 */
+  }
+}</code></pre>
+<p>浏览器会根据系统设置自动选择浅色或深色模式，<strong>什么都不用写</strong>——CSS 的 <code>prefers-color-scheme</code> 媒体查询会自动生效。</p>
+
+<h4>oklch() 领域色</h4>
+<p>9 个领域各有一种标识色，用 <code>oklch()</code> 色彩空间生成：</p>
+<pre><code>/* AI Agent → oklch(0.60 0.05 250) → 蓝紫色调，但饱和度极低 */
+/* AI/ML   → oklch(0.60 0.05 180) → 青色系，同样低饱和 */
+/* 教育    → oklch(0.60 0.05 95)  → 暖黄绿色 */</code></pre>
+<p><strong>关键：所有领域色的亮度（0.60）和饱和度（0.05）完全一致</strong>，只有色相（hue）不同。这让它们在视觉上"同等重要"，不会某个颜色特别抢眼——符合莫兰迪"所有颜色都安静"的理念。</p>
+
+<h4>布局方案</h4>
+<table class="term-table">
+<tr><th>技术</th><th>用在哪里</th><th>为什么选它</th></tr>
+<tr><td><strong>CSS Grid</strong></td><td>卡片内部（rank + info + star 三栏）、统计面板</td><td>二维布局，适合"表格化"的排列</td></tr>
+<tr><td><strong>Flexbox</strong></td><td>标签行、筛选栏、导航栏、展开区按钮</td><td>一维排列，适合"流式"的元素组</td></tr>
+<tr><td><strong>@media 响应式</strong></td><td>768px / 420px 两个断点</td><td>桌面→平板→手机逐层适配</td></tr>
+<tr><td><strong>sticky</strong></td><td>领域导航栏</td><td>滚动时固定在顶部，不遮挡内容</td></tr>
+</table>
+
+<h3>原生 JS 交互逻辑</h3>
+
+<h4>数据绑定</h4>
+<p>ALLTIME 和 RECENT 两个 JS 变量在 build_site.py 生成时直接写入 HTML，浏览器加载后立即可用：</p>
+<pre><code>function switchTab(t) {
+  data = t === 'all' ? [...ALLTIME] : [...RECENT];
+  doSort();       // 按当前排序方式重排
+  buildOpts();    // 重建筛选器选项
+  render(data);   // 重新渲染卡片列表
+}</code></pre>
+
+<h4>筛选与排序（纯前端计算）</h4>
+<pre><code>function apply() {
+  let items = data;
+  if (lang !== 'all') items = items.filter(r => r.lang === lang);
+  if (field !== 'all') items = items.filter(r => r.field === field);
+  render(items);  // 筛选后重新渲染，完全在浏览器内存中完成
+}
+
+function setSort(type) {
+  if (type === 'stars')  data.sort((a,b) => b.stars - a.stars);
+  if (type === 'month')  data.sort((a,b) => b.stars_month - a.stars_month);
+  if (type === 'fresh')  data.sort((a,b) => new Date(b.pushed) - new Date(a.pushed));
+  apply();
+}</code></pre>
+
+<h4>卡片展开/折叠</h4>
+<pre><code>function toggleCard(card) {
+  card.classList.toggle('open');  // 切换 CSS 类，展开区由 CSS 控制显示
+}</code></pre>
+<p>展开区默认 <code>display:none</code>，加上 <code>.open</code> 类后变为 <code>display:flex</code>。所有动画都由 CSS 的 <code>transition</code> 处理，JS 只做一件事：切换类名。</p>
+
+<div class="novice-box">
+<div class="nb-label">新手解读</div>
+<p><strong>CSS Grid vs Flexbox：怎么记？</strong> Grid 是"二维表格思维"——你心里有一个行×列的网格，然后把元素放到格子里（就像 Excel）。Flexbox 是"一维排列思维"——元素们排成一排（或一列），自动换行、自动分配空间。这个项目卡片内部用 Grid（rank/name/star 三栏位置固定），标签行用 Flexbox（标签数量不定，自然流淌）。<br><br>
+<strong>为什么不用 React？</strong> React 解决的核心问题是"数据变了，页面怎么自动更新"。但这个项目的数据在打开页面后就<strong>不再变化</strong>——它是只读的。筛选和排序只是从已有的 100 条数据里挑子集，不需要"状态管理"、"虚拟 DOM"、"响应式绑定"。就像你不会用一个电饭煲去热一杯凉水——工具要对场景。这里原生 JS 完全够用，而且代码量比加 React 更少。</p>
+</div>
+</section>
+
+<!-- ═══════════ 五、部署层 ═══════════ -->
+<section class="ts-section">
+<h2><span class="num">五</span> 部署层：Git + GitHub Pages + Actions</h2>
+
+<h3>Git 基础</h3>
+<p>Git 是一个<strong>版本管理工具</strong>，记录每次修改的"快照"。对你来说最常用的命令：</p>
+<pre><code>git status              # 看改了哪些文件
+git add data/ docs/     # 把改动加入"待提交区"
+git commit -m "说明"    # 记录一个版本
+git push                # 推送到 GitHub 远程仓库</code></pre>
+
+<h3>GitHub Pages 原理</h3>
+<p>GitHub 免费提供的静态网站托管服务。你把文件放在仓库的 <code>docs/</code> 目录下，GitHub 自动把它们变成可公开访问的网页：</p>
+<pre><code>https://QwX777MCC.github.io/oss-top50/           → docs/index.html
+https://QwX777MCC.github.io/oss-top50/top50.html  → docs/top50.html
+https://QwX777MCC.github.io/oss-top50/tech-stack.html → docs/tech-stack.html</code></pre>
+<ul>
+  <li><strong>免费</strong>：无流量费、无服务器费</li>
+  <li><strong>自动 HTTPS</strong>：自动配置 SSL 证书（地址栏小锁）</li>
+  <li><strong>全球 CDN</strong>：GitHub 的服务器分布全球，访问速度有保障</li>
+  <li><strong>实时生效</strong>：push 代码后约 1 分钟内更新</li>
+</ul>
+
+<h3>GitHub Actions CI/CD 全流程</h3>
+<p>CI/CD（持续集成/持续部署）的意思是把"数据更新 → 构建 → 部署"这一串操作自动化。这个项目的 Action 配置（<code>.github/workflows/update.yml</code>）：</p>
+<pre><code># 触发方式：手动（在 GitHub 网页上点按钮）
+on:
+  workflow_dispatch:
+    inputs:
+      reason:  # 可选填"为什么更新"
+
+# 执行步骤（在 GitHub 提供的免费虚拟机上跑）：
+steps:
+  1. checkout       # 把代码拉下来
+  2. setup-python   # 装 Python 3.11
+  3. pip install    # 装 requests 库
+  4. fetch_data.py  # 调 GitHub API 拿最新数据
+  5. build_site.py  # 生成最新 HTML
+  6. git commit     # 把变动提交
+  7. deploy         # 推送到 gh-pages 分支 → 自动上线</code></pre>
+
+<p><strong>手动触发 vs 定时触发：</strong> 当初讨论过两种方案——每天自动跑（cron 定时）和手动点按钮（workflow_dispatch）。最终选了手动，因为：数据变化频率低（一周一次足够）、避免空跑浪费、出错时有人盯着。</p>
+
+<h3>SSH 认证</h3>
+<p>Git 推送代码到 GitHub 需要"自证身份"。我们用的是 SSH 密钥——在你的电脑上生成一对"公钥+私钥"，公钥放 GitHub，私钥留本地。推送时 Git 自动用私钥签名，GitHub 用公钥验证。<strong>密钥类型选了 ED25519</strong>（比传统的 RSA 更短更快更安全）。</p>
+
+<div class="novice-box">
+<div class="nb-label">新手解读</div>
+<p><strong>CI/CD 到底解决了什么？</strong> 没有它的时候，更新一次榜单需要你手动操作：开终端 → 跑 fetch → 跑 build → git add → git commit → git push。有了 Actions，你只需要在 GitHub 网页上点一下按钮，剩下 7 步全部自动完成。这就是"自动化"——把重复操作交给机器。<br><br>
+<strong>为什么选 GitHub Pages 而不是买服务器？</strong> 服务器（云主机/VPS）虽然灵活，但需要你维护操作系统、配置 Web Server（如 Nginx）、管理 HTTPS 证书、监控资源、付月费。对于一个纯静态的排行榜页面，这是用牛刀杀鸡。GitHub Pages 把这些运维成本降到零——你只负责写文件，其他全不用管。</p>
+</div>
+</section>
+
+<!-- ═══════════ 六、设计哲学 ═══════════ -->
+<section class="ts-section">
+<h2><span class="num">六</span> 设计哲学复盘</h2>
+
+<h3>形式跟随功能（Form Follows Function）</h3>
+<p>每个视觉元素的存在都有一个<strong>信息传达目的</strong>，没有纯装饰性的设计。具体体现：</p>
+<ul>
+  <li><strong>排名数字</strong>不是装饰，是用户的第一入口——所以放在卡片最左，用最大权重</li>
+  <li><strong>进度条</strong>不是图表，是把相对排名可视化——一眼看"它大概排在第几梯队"</li>
+  <li><strong>领域色</strong>不是配色好看，是给大脑一个快速分类的锚点——扫一眼颜色就知道这是 AI 还是 DevOps</li>
+  <li><strong>展开按钮极弱化</strong>（45% 透明度、无边框）——因为它出现 50 次，太抢眼会破坏信息流</li>
+</ul>
+
+<h3>莫兰迪调色板（oklch 色彩空间）</h3>
+<p>莫兰迪高级灰的核心是"<strong>所有颜色都降饱和度、统一亮度</strong>"，这让页面看起来安静、高级、不累眼。技术上用 <code>oklch()</code> 实现而非传统的 <code>#RRGGBB</code> 或 <code>rgb()</code>：</p>
+<ul>
+  <li>oklch(亮度 饱和度 色相) → 三个参数物理意义独立</li>
+  <li>传统 rgb/rgba 改一个参数会影响另外两个，调整颜色像"黑盒"</li>
+  <li>oklch 的亮度参数是<strong>感知均匀</strong>的——亮度 0.6 到 0.7 的视觉变化在所有色相上都一致</li>
+</ul>
+
+<h3>F 型阅读流</h3>
+<p>眼动追踪研究显示，人在网页上的阅读模式呈 F 形——从上到下、从左到右，左侧权重最高。这个页面的卡片布局正是基于 F 型：</p>
+<pre><code>┌──────────────────────────────────────────────────────┐
+│ [#1]  ← 排名（最左，视线第一落点，视觉权重最高）        │
+│                                                      │
+│ freeCodeCamp/freeCodeCamp ↗                          │
+│ 编程教育界的"免费替代一切付费 bootcamp"...  ← 项目名+描述│
+│ [javascript] [react] [nodejs]                  ← 标签  │
+│                                   ★ 425,341  ← Star数 │
+│                                   ██████████  ← 进度条 │
+└──────────────────────────────────────────────────────┘
+     左 ════════ 视线流动方向 ════════→ 右（权重递减）</code></pre>
+
+<h3>移动端平面构成</h3>
+<p>768px 断点恢复三栏融合式（rank + info + star 同排），420px 断点 Star 列融入第二行右侧。间距节奏统一基于 4px 网格（gap: 8px, padding: 12px 等），确保视觉上"呼吸均匀"，不出现某处太挤、某处太空的参差感。</p>
+
+<div class="novice-box">
+<div class="nb-label">新手解读</div>
+<p><strong>设计哲学和技术的关系？</strong> 很多人以为设计和代码是两件事——设计师出图，开发者照着做。但在这个项目里，设计决策直接表达在代码结构里。比如"形式跟随功能"变成了一条铁律：每写一行 CSS，都要问自己"这条规则在帮用户理解什么信息？"如果回答不上来，就删掉。这就是"设计工程化"——不是先把视觉做好再写代码，而是用代码来<strong>实现设计意图</strong>。</p>
+</div>
+</section>
+
+<!-- ═══════════ 术语速查 ═══════════ -->
+<section class="ts-section">
+<h2><span class="num">附</span> 术语速查表</h2>
+<table class="term-table">
+<tr><th>术语</th><th>一句话解释</th></tr>
+<tr><td>API</td><td>程序之间"对话"的接口，GitHub API 就是让你用代码查 GitHub 数据的入口</td></tr>
+<tr><td>JSON</td><td>最通用的数据格式，长得像 Python 字典，人可读、程序可解析</td></tr>
+<tr><td>静态网站</td><td>所有内容在部署前已生成好的网站，不需要服务器实时计算</td></tr>
+<tr><td>CSS Grid</td><td>二维网格布局，适合"表格化"排列（卡片的三栏结构）</td></tr>
+<tr><td>Flexbox</td><td>一维弹性布局，适合"流式"排列（标签行、按钮组）</td></tr>
+<tr><td>CSS 变量</td><td>把颜色/尺寸等值定义为变量，改一处全站生效（如 --tx: #3d3832）</td></tr>
+<tr><td>oklch()</td><td>新一代 CSS 色彩函数，亮度/饱和度/色相三个参数物理意义独立</td></tr>
+<tr><td>响应式设计</td><td>一个页面自动适应不同屏幕尺寸（桌面/平板/手机）</td></tr>
+<tr><td>Git</td><td>版本管理工具，记录文件的每次修改历史</td></tr>
+<tr><td>GitHub Pages</td><td>GitHub 免费提供的静态网站托管服务</td></tr>
+<tr><td>CI/CD</td><td>持续集成/持续部署——把构建和部署自动化</td></tr>
+<tr><td>workflow_dispatch</td><td>GitHub Actions 的手动触发方式（在网页上点按钮运行）</td></tr>
+<tr><td>SSH</td><td>安全远程连接协议，在这里用于 Git 推送时的身份认证</td></tr>
+<tr><td>ED25519</td><td>一种现代 SSH 密钥算法，比 RSA 更短更快更安全</td></tr>
+<tr><td>关注点分离</td><td>软件工程原则——数据和展示、逻辑和样式各管各的，互不干扰</td></tr>
+</table>
+</section>
+
+<footer style="margin-top:48px;padding:24px 0;border-top:1.5px solid var(--bd)">
+<p style="font-size:.76rem;color:var(--tx-f)">oss-top50 技术栈文档 · 面向零基础学习者的技术梳理 · 随项目持续更新</p>
+</footer>
+
+</div>
+</body>
+</html>

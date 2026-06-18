@@ -23,7 +23,7 @@ header{margin-bottom:36px}
 .eyebrow{color:var(--tx-f);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .eyebrow::before{content:"";width:18px;height:1.5px;background:var(--tx-f);border-radius:1px}
 h1{font-size:1.8rem;font-weight:600;letter-spacing:-.015em;margin:0 0 6px}
-.subtitle{color:var(--tx-d);font-size:.9rem}
+.subtitle{color:var(--tx-d);font-size:.9rem;line-height:1.65;word-break:break-word;overflow-wrap:break-word;letter-spacing:.015em}
 .src-line{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.72rem;color:var(--tx-f)}
 .src-line svg{width:14px;height:14px;opacity:.5}
 
@@ -66,10 +66,10 @@ h1{font-size:1.8rem;font-weight:600;letter-spacing:-.015em;margin:0 0 6px}
 .rank-num.t3{font-weight:700}
 
 .repo-info-c{min-width:0}
-.repo-name-c{font-size:1rem;font-weight:600;color:var(--tx);text-decoration:none;display:flex;align-items:center;gap:5px;margin-bottom:3px}
+.repo-name-c{font-size:1rem;font-weight:600;color:var(--tx);text-decoration:none;display:flex;align-items:center;gap:5px;margin-bottom:3px;word-break:break-word;overflow-wrap:break-word}
 .repo-name-c svg{width:14px;height:14px;opacity:.35;flex-shrink:0;transition:opacity var(--tr)}
 .repo-name-c:hover svg{opacity:.7}
-.repo-one-liner{font-size:.82rem;color:var(--tx-d);overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.repo-one-liner{font-size:.82rem;color:var(--tx-d);overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;line-height:1.55;word-break:break-word;letter-spacing:.008em}
 .repo-tags-row{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
 .repo-tags-row span{font-size:.65rem;padding:2px 8px;border-radius:10px;border:1px solid var(--bd);color:var(--tx-d);white-space:nowrap}
 
@@ -122,24 +122,129 @@ footer a:hover{color:var(--tx)}
 .pulse-indicator{display:inline-block;width:8px;height:8px;border-radius:50%;background:#90ab8e;margin-right:6px;animation:dot 2.4s ease-in-out infinite}
 @keyframes dot{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
 
+/* ── 手机端优化（≥569px 中型手机） ── */
 @media(max-width:768px){
   .wrap{padding:28px 16px 64px}
   h1{font-size:1.4rem}
-  .card-collapsed{grid-template-columns:40px 1fr;gap:10px;padding:12px 12px}
-  .star-col{grid-column:2;flex-direction:row;align-items:center;min-width:0;gap:10px}
-  .star-bar-w{max-width:80px}
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .repo-name-c{font-size:.92rem}
-  .toggle-btn{font-size:.58rem;padding:2px 0 2px 12px;margin:2px 0 16px 0}
-  .collapse-btn{margin:14px 4px 0 auto;font-size:.58rem;opacity:.65}
+  /* 卡片重构：三栏融合式布局，消除上下断裂 */
+  .card-collapsed{
+    grid-template-columns:36px 1fr auto;
+    gap:8px 10px;
+    padding:11px 13px;
+    align-items:center
+  }
+  /* 排名弱化：减少尺寸，不抢视觉重心 */
+  .rank-num{
+    width:30px;height:30px;
+    font-size:.76rem;
+    border-radius:3px
+  }
+  /* 项目信息区：增强层级对比 */
+  .repo-info-c{min-width:0}
+  .repo-name-c{
+    font-size:.95rem;
+    margin-bottom:2px;
+    word-break:break-word;
+    overflow-wrap:break-word
+  }
+  /* 描述行：放宽行高 + 允许2行展示（比粗暴截断更友好） */
+  .repo-one-liner{
+    font-size:.8rem;
+    line-height:1.5;
+    -webkit-line-clamp:2;
+    letter-spacing:.01em
+  }
+  /* 标签：缩小但不消失 */
+  .repo-tags-row{margin-top:3px}
+  .repo-tags-row span{
+    font-size:.6rem;
+    padding:1px 6px
+  }
+  /* Star 列保持右对齐，紧凑化 */
+  .star-col{
+    flex-direction:column;
+    align-items:flex-end;
+    min-width:70px;
+    gap:4px
+  }
+  .star-num{font-size:.84rem}
+  .star-bar-w{width:60px;height:2.5px}
+  /* 统计卡片区 */
+  .stats-row{grid-template-columns:repeat(2,1fr);gap:6px}
+  .stat-card{padding:12px 14px}
+  .stat-val{font-size:1.35rem}
+  /* 展开按钮 */
+  .toggle-btn{
+    font-size:.57rem;
+    padding:2px 0 2px 13px;
+    margin:1px 0 14px 0
+  }
+  .collapse-btn{
+    margin:14px 4px 0 auto;
+    font-size:.57rem;
+    opacity:.65
+  }
+  /* 筛选栏：横向紧凑排列 */
+  .filter-bar{
+    padding:9px 11px;
+    gap:6px;
+    flex-wrap:nowrap;
+    overflow-x:auto
+  }
+  .filter-bar label{font-size:.64rem;white-space:nowrap;flex-shrink:0}
+  .filter-bar select{padding:5px 24px 5px 8px;font-size:.78rem;flex-shrink:0}
+  .sort-chip{padding:4px 11px;font-size:.72rem;white-space:nowrap;flex-shrink:0}
+  /* 首页 */
   .home-hero h1{font-size:1.5rem}
+  /* 展开区文字优化 */
+  .exp-insight{
+    font-size:.84rem;
+    line-height:1.68;
+    padding:12px 13px
+  }
+  .exp-section p,.exp-section li{font-size:.78rem;line-height:1.62}
 }
+
+/* ── 小屏手机（≤420px） ── */
 @media(max-width:420px){
-  .stats-row{grid-template-columns:1fr 1fr}
-  .filter-bar{flex-direction:column;align-items:flex-start}
   html{font-size:15px}
+  .wrap{padding:20px 12px 56px}
+  h1{font-size:1.25rem}
+  .card-collapsed{
+    grid-template-columns:32px 1fr;
+    gap:7px 8px;
+    padding:10px 11px
+  }
+  .rank-num{width:26px;height:26px;font-size:.72rem;border-radius:3px}
+  .repo-name-c{font-size:.89rem;margin-bottom:1px}
+  .repo-one-liner{font-size:.76rem;line-height:1.52;-webkit-line-clamp:2}
+  .repo-tags-row span{font-size:.58rem;padding:1px 5px}
+  /* Star 融入第二行右侧 */
+  .star-col{
+    grid-column:2;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-end;
+    min-width:0;
+    gap:7px
+  }
+  .star-bar-w{max-width:64px;height:2px}
+  .star-num{font-size:.8rem}
+  .stats-row{grid-template-columns:1fr 1fr;gap:5px}
+  .stat-card{padding:10px 12px}
+  .stat-val{font-size:1.25rem}
+  .stat-label{font-size:.64rem}
+  .filter-bar{
+    flex-direction:column;
+    align-items:stretch;
+    padding:8px 10px
+  }
+  .filter-bar select{width:100%;box-sizing:border-box}
+  .sort-chip{flex:1;text-align:center;padding:5px 8px}
   .home-link{flex:1 1 100%}
-  .repo-name-c{font-size:.85rem}
-  .toggle-btn{font-size:.55rem;padding:2px 0 2px 8px;margin:2px 0 12px 0}
-  .collapse-btn{margin:12px 2px 0 auto;font-size:.55rem}
+  .toggle-btn{font-size:.54rem;padding:2px 0 2px 11px;margin:1px 0 11px 0}
+  .collapse-btn{margin:11px 2px 0 auto;font-size:.54rem}
+  .exp-insight{font-size:.8rem;line-height:1.66;padding:10px 11px}
+  .exp-section p,.exp-section li{font-size:.74rem;line-height:1.6}
+  .exp-meta{font-size:.68rem;gap:8px;flex-wrap:wrap}
 }
