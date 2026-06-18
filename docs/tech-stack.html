@@ -93,6 +93,13 @@
   .ts-section pre{font-size:.7rem;padding:10px 12px}
   .term-table th,.term-table td{padding:6px 8px;font-size:.74rem}
 }
+@media(max-width:380px){
+  .ts-section pre{font-size:.65rem}
+  .term-table th,.term-table td{padding:4px 6px;font-size:.68rem}
+}
+@media(min-width:1600px){
+  .ts-section h2{font-size:1.5rem}
+}
 /* 快捷键 */
 .shortcut{display:inline-flex;align-items:center;gap:3px}
 .shortcut kbd{
@@ -312,7 +319,7 @@ const RECENT = [ ...共50条... ];</code></pre>
 <tr><th>技术</th><th>用在哪里</th><th>为什么选它</th></tr>
 <tr><td><strong>CSS Grid</strong></td><td>卡片内部（rank + info + star 三栏）、统计面板</td><td>二维布局，适合"表格化"的排列</td></tr>
 <tr><td><strong>Flexbox</strong></td><td>标签行、筛选栏、导航栏、展开区按钮</td><td>一维排列，适合"流式"的元素组</td></tr>
-<tr><td><strong>@media 响应式</strong></td><td>768px / 420px 两个断点</td><td>桌面→平板→手机逐层适配</td></tr>
+<tr><td><strong>@media 响应式</strong></td><td>380px / 420px / 768px / 1600px 四个断点</td><td>极小屏→手机→平板→大屏逐层适配</td></tr>
 <tr><td><strong>sticky</strong></td><td>领域导航栏</td><td>滚动时固定在顶部，不遮挡内容</td></tr>
 </table>
 
