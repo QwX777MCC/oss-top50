@@ -1,14 +1,14 @@
 /* ── oss-top50 共享样式 ── */
 :root{
   --cvs:#f5f3f0;--crd:#fdfcfa;--crd-h:#f0ede9;--crd-a:#e8e4df;
-  --bd:#e0dbd4;--bd-h:#d0c9c0;--tx:#3d3832;--tx-d:#7a736b;--tx-f:#b0a89e;
+  --bd:#e0dbd4;--bd-h:#d0c9c0;--tx:#3d3832;--tx-d:#7a736b;--tx-dim:#948d85;--tx-f:#b0a89e;
   --r:8px;--rs:4px;--rl:12px;--tr:160ms ease;
   --font:-apple-system,"Segoe UI","PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
   --mono:"SF Mono","Fira Code","Cascadia Code",monospace
 }
 @media(prefers-color-scheme:dark){
   :root{--cvs:#2a2825;--crd:#33302d;--crd-h:#3a3734;--crd-a:#403d39;
-    --bd:#45413d;--bd-h:#55514c;--tx:#e8e4df;--tx-d:#a09a92;--tx-f:#6b6660}
+    --bd:#45413d;--bd-h:#55514c;--tx:#e8e4df;--tx-d:#a09a92;--tx-dim:#858078;--tx-f:#6b6660}
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;background:var(--cvs);scroll-behavior:smooth}

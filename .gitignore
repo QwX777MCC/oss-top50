@@ -10,3 +10,12 @@ venv/
 .DS_Store
 Thumbs.db
 *.log
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.egg-info/
+dist/
+build/

@@ -154,8 +154,8 @@ Actions 会自动：
 - `fetch_data.py` 保存新数据时自动保留已有的 `desc_cn`（不覆盖）
 
 ### 如何添加新翻译
-1. 直接编辑 `data/alltime.json` 或 `data/recent.json`，在对应仓库对象中加 `"desc_cn": "中文描述"`
-2. 或运行 `python scripts/translate.py`，该脚本读取 data JSON，对缺失 `desc_cn` 的条目生成占位提示
+1. 直接编辑 `data/alltime.json` 或 `data/recent.json`，在对应仓库对象中加 `"desc_cn": "中文描述"`，并标注 `"desc_cn_source": "manual"`
+2. AI 翻译：在 AI 助手中提 "为 {repo_name} 写一句中文简介"，将结果手动填入 JSON
 3. 翻译原则：1-2 句中文字，保留技术名词原文（如 "Claude Code" 不翻译），避免「最好的」「革命性的」等营销腔
 
 ---

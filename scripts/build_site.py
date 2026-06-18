@@ -1,4 +1,7 @@
 import json, os, re
+from datetime import date
+
+today = date.today().isoformat()  # 动态日期，不再硬编码
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 DOCS_DIR = os.path.join(os.path.dirname(__file__), '..', 'docs')
@@ -210,7 +213,7 @@ html = f'''<!DOCTYPE html>
 <div class="subtitle">全期经典对照近半年爆发 · 点击卡片展开深度解析 · 每条可溯源</div>
 <div class="src-line">
 <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-数据来自 GitHub Search API · 截至 2026-06-18
+数据来自 GitHub Search API · 截至 {today}
 </div>
 </header>
 
@@ -229,7 +232,7 @@ html = f'''<!DOCTYPE html>
 
 <div class="tab-bar">
 <button class="tab-btn active" onclick="switchTab('all')" id="tab-all">全期 Top 50</button>
-<button class="tab-btn" onclick="switchTab('rec')" id="tab-rec">近半年 Top 50 <span class="tab-sub">2026.01–06</span></button>
+<button class="tab-btn" onclick="switchTab('rec')" id="tab-rec">近半年 Top 50 <span class="tab-sub">{date.today().strftime('%Y.01')}–{date.today().strftime('%m')}</span></button>
 </div>
 
 <div class="filter-bar">
@@ -244,7 +247,7 @@ html = f'''<!DOCTYPE html>
 <div id="list"></div>
 
 <footer>
-数据来源 <a href="https://github.com" target="_blank">GitHub</a> Search API &middot; 排序 Star 降序 &middot; 洞察基于第一性原理分析 &middot; 手动触发更新 &middot; 生成 2026-06-18
+数据来源 <a href="https://github.com" target="_blank">GitHub</a> Search API &middot; 排序 Star 降序 &middot; 洞察基于第一性原理分析 &middot; 手动触发更新 &middot; 生成 {today}
 </footer>
 
 </div>
@@ -257,7 +260,7 @@ let tab='all',srt='stars',data=ALLTIME;
 
 function fn(n){{return n.toLocaleString()}}
 function fK(n){{return n>=1e5?(n/1e3|0)+'K':(n/1e3).toFixed(1)+'K'}}
-function da(d){{return Math.max(1,Math.floor((new Date('2026-06-18')-new Date(d))/864e5))}}
+function da(d){{return Math.max(1,Math.floor((new Date('{today}')-new Date(d))/864e5))}}
 
 function buildOpts(){{
   const L=new Set,R=new Set;data.forEach(r=>{{L.add(r.lang);R.add(r.field)}})

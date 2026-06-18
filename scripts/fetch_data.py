@@ -55,7 +55,7 @@ def compress(items):
             created_dt = datetime.strptime(created, '%Y-%m-%d')
             months = max(1, (today - created_dt.date()).days / 30.0)
             stars_month = round(r.get('stargazers_count', 0) / months)
-        except:
+        except (ValueError, AttributeError):
             stars_month = 0
 
         compressed.append({
