@@ -361,8 +361,8 @@ function setSort(t){{
 doSort();buildOpts();render(data)
 </script>
 <button class="theme-toggle" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'':'dark'" title="切换明暗模式">☀</button>
-<a class="back-top" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" title="回到顶部">▲</a>
-<script>(function(){var b=document.querySelector('.back-top');if(b){window.addEventListener('scroll',function(){b.classList.toggle('show',(window.pageYOffset||document.documentElement.scrollTop)>300)},{passive:true})}})()</script>
+<a class="back-top" href="#" onclick="window.scrollTo({{top:0,behavior:'smooth'}});return false" title="回到顶部">▲</a>
+<script>(function(){{var b=document.querySelector('.back-top');if(b){{window.addEventListener('scroll',function(){{b.classList.toggle('show',(window.pageYOffset||document.documentElement.scrollTop)>300)}},{{passive:true}})}}}})()</script>
 </body>
 </html>'''
 
