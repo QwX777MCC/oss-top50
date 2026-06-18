@@ -130,7 +130,7 @@ footer a:hover{color:var(--tx)}
   .star-bar-w{max-width:80px}
   .stats-row{grid-template-columns:repeat(2,1fr)}
   .repo-name-c{font-size:.92rem}
-  .toggle-btn{font-size:.58rem;margin:2px 0 18px 2px}
+  .toggle-btn{font-size:.58rem;padding:2px 0 2px 12px;margin:2px 0 16px 0}
   .collapse-btn{margin:14px 4px 0 auto;font-size:.58rem;opacity:.65}
   .home-hero h1{font-size:1.5rem}
 }
@@ -140,5 +140,6 @@ footer a:hover{color:var(--tx)}
   html{font-size:15px}
   .home-link{flex:1 1 100%}
   .repo-name-c{font-size:.85rem}
+  .toggle-btn{font-size:.55rem;padding:2px 0 2px 8px;margin:2px 0 12px 0}
   .collapse-btn{margin:12px 2px 0 auto;font-size:.55rem}
 }
