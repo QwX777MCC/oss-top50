@@ -55,7 +55,7 @@ h1{font-size:1.8rem;font-weight:600;letter-spacing:-.015em;margin:0 0 6px}
 .sec-head h3{font-size:1rem;font-weight:600}
 .sec-count{font-size:.72rem;color:var(--tx-f)}
 
-.repo-card{border:1px solid transparent;border-radius:var(--rl);margin-bottom:6px;position:relative;transition:all var(--tr);cursor:pointer}
+.repo-card{border:1px solid transparent;border-radius:var(--rl);margin-bottom:6px;position:relative;transition:all var(--tr)}
 .repo-card:hover{background:var(--crd-h);border-color:var(--bd)}
 .repo-card.open{background:var(--crd);border-color:var(--bd)}
 .repo-card::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:0 2px 2px 0;opacity:0;transition:opacity var(--tr)}
@@ -78,11 +78,12 @@ h1{font-size:1.8rem;font-weight:600;letter-spacing:-.015em;margin:0 0 6px}
 .star-bar-w{width:100%;height:3px;background:var(--bd);border-radius:2px;overflow:hidden}
 .star-bar-f{height:100%;border-radius:2px;transition:width .5s ease}
 
-.expand-hint{grid-column:1/-1;text-align:center;font-size:.7rem;color:var(--tx-f);padding:0 16px 10px}
+.toggle-btn{grid-column:1/-1;display:block;width:100%;padding:6px 0 12px;border:none;background:transparent;color:var(--tx-f);font-size:.72rem;font-family:var(--font);cursor:pointer;transition:all var(--tr)}
+.toggle-btn:hover{color:var(--tx)}
+.repo-card.open .toggle-btn{display:none}
 
 .card-expanded{display:none;padding:0 16px 18px}
 .repo-card.open .card-expanded{display:block}
-.repo-card.open .expand-hint{display:none}
 
 .exp-insight{font-size:.88rem;color:var(--tx);line-height:1.65;padding:14px 16px;margin-bottom:14px;border-left:3px solid var(--tx-f);background:var(--crd-a);border-radius:0 var(--rs) var(--rs) 0}
 .exp-section{margin-bottom:14px}
@@ -94,6 +95,8 @@ h1{font-size:1.8rem;font-weight:600;letter-spacing:-.015em;margin:0 0 6px}
 .exp-meta{display:flex;flex-wrap:wrap;gap:12px;font-size:.75rem;color:var(--tx-f);padding-top:12px;border-top:1px solid var(--bd);margin-top:12px}
 .exp-link{display:inline-flex;align-items:center;gap:4px;margin-top:10px;color:var(--tx-d);text-decoration:none;font-size:.8rem;border-bottom:1px dotted var(--tx-f)}
 .exp-link:hover{color:var(--tx)}
+.collapse-btn{display:block;width:100%;margin-top:16px;padding:8px 0;border:none;border-top:1px solid var(--bd);background:transparent;color:var(--tx-f);font-size:.72rem;font-family:var(--font);cursor:pointer;transition:all var(--tr)}
+.collapse-btn:hover{color:var(--tx)}
 .exp-original{margin-top:10px;font-size:.72rem;color:var(--tx-f)}
 .exp-original summary{cursor:pointer;color:var(--tx-d);user-select:none}
 .exp-original summary:hover{color:var(--tx)}
