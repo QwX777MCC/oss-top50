@@ -119,6 +119,7 @@ h1{font-size:clamp(1.25rem,3vw,1.8rem);font-weight:600;letter-spacing:-.015em;ma
 
 .repo-info-c{min-width:0}
 .repo-name-c{font-size:clamp(0.89rem,2vw,1rem);font-weight:600;color:var(--tx);text-decoration:none;display:flex;align-items:center;gap:5px;margin-bottom:3px;word-break:break-word;overflow-wrap:break-word}
+.untr-dot{font-size:8px;color:oklch(0.62 0.10 85);flex-shrink:0;line-height:1}
 .repo-one-liner{font-size:.82rem;color:var(--tx-d);overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;line-height:1.55;word-break:break-word;letter-spacing:.008em}
 .repo-tags-row{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
 .repo-tags-row span{font-size:.65rem;padding:2px 8px;border-radius:10px;border:1px solid var(--bd);color:var(--tx-d);white-space:nowrap}

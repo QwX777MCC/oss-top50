@@ -107,5 +107,13 @@ def main():
         json.dump(compressed_rec, f, ensure_ascii=False, indent=2)
     print(f"  Saved {len(compressed_rec)} repos to {path_rec}")
 
+    # ── 翻译覆盖率检测 ──
+    for label, data in [('全期', compressed_all), ('近半年', compressed_rec)]:
+        missing = [r['name'] for r in data if not r.get('desc_cn')]
+        if missing:
+            print(f"\n  ⚠ {label}榜单 {len(missing)}/{len(data)} 个仓库缺中文翻译:")
+            for name in missing:
+                print(f"     - {name}")
+
 if __name__ == '__main__':
     main()

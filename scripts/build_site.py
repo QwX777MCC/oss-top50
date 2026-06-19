@@ -186,7 +186,8 @@ for lst in [alltime, recent]:
                 'insight': auto_insight(item),
                 'problem': auto_problem(item),
                 'features': auto_features(item),
-                'desc_en': item.get('desc', '')
+                'desc_en': item.get('desc', ''),
+                'untr': not item.get('desc_cn')
             }
 
 def fmt(n): return f"{n:,}"
@@ -299,7 +300,7 @@ function render(items){{
         <div class="card-collapsed">
           <div class="rank-num ${{r.ri<=3?'t3':''}}" style="${{r.ri<=3?'color:'+clr+';':''}}">#${{r.ri}}</div>
           <div class="repo-info-c">
-            <span class="repo-name-c">${{esc(r.name)}}</span>
+            <span class="repo-name-c">${{esc(r.name)}}${{ins.untr?' <span class=\"untr-dot\" title=\"待翻译\">●</span>':''}}</span>
             <div class="repo-one-liner">${{esc(ins.insight||ins.problem||r.desc||'')}}</div>
             ${{r.topics&&r.topics.length?'<div class="repo-tags-row">'+r.topics.slice(0,5).map(t=>`<span>${{esc(t)}}</span>`).join('')+'</div>':''}}
           </div>
