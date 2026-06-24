@@ -15,7 +15,7 @@
 <div class="subtitle">全期经典对照近半年爆发 · 点击卡片展开深度解析 · 每条可溯源</div>
 <div class="src-line">
 <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-数据来自 GitHub Search API · 截至 2026-06-19
+数据来自 GitHub Search API · 截至 2026-06-24
 </div>
 </header>
 
@@ -49,7 +49,7 @@
 <div id="list"></div>
 
 <footer>
-数据来源 <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a> Search API &middot; 排序 Star 降序 &middot; 洞察基于第一性原理分析 &middot; 手动触发更新 &middot; 生成 2026-06-19
+数据来源 <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a> Search API &middot; 排序 Star 降序 &middot; 洞察基于第一性原理分析 &middot; 手动触发更新 &middot; 生成 2026-06-24
 </footer>
 
 </div>
@@ -62,7 +62,7 @@ let tab='all',srt='stars',data=ALLTIME;
 
 function fn(n){return n.toLocaleString()}
 function fK(n){return n>=1e5?(n/1e3|0)+'K':(n/1e3).toFixed(1)+'K'}
-function da(d){return Math.max(1,Math.floor((new Date('2026-06-19')-new Date(d))/864e5))}
+function da(d){return Math.max(1,Math.floor((new Date('2026-06-24')-new Date(d))/864e5))}
 
 function buildOpts(){
   const L=new Set,R=new Set;data.forEach(r=>{L.add(r.lang);R.add(r.field)})
@@ -159,7 +159,8 @@ function setSort(t){
 
 doSort();buildOpts();render(data)
 </script>
-<button class="theme-toggle" onclick="var d=document.documentElement,t=d.dataset.theme,auto=matchMedia('(prefers-color-scheme:dark)').matches,isDark=(t==='dark')||(!t&&auto);d.dataset.theme=isDark?'light':'dark'" title="切换明暗模式">◐</button>
+<button class="theme-toggle" onclick="var d=document.documentElement,t=d.dataset.theme,auto=matchMedia('(prefers-color-scheme:dark)').matches,isDark=(t==='dark')||(!t&&auto);d.dataset.theme=isDark?'light':'dark';localStorage.setItem('oss-theme',d.dataset.theme||'')" title="切换明暗模式">◐</button>
+<script>var s=localStorage.getItem('oss-theme');if(s)document.documentElement.dataset.theme=s</script>
 <a class="back-top" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" title="回到顶部"></a>
 <script>(function(){var b=document.querySelector('.back-top');if(b){window.addEventListener('scroll',function(){b.classList.toggle('show',(window.pageYOffset||document.documentElement.scrollTop)>300)},{passive:true})}})()</script>
 </body>
